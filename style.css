@@ -1,54 +1,250 @@
 /* --- style.css --- */
 :root {
-    --brand-blue: #004481;  /* Azul oscuro Naves Del Sur */
-    --brand-light: #00a8e8; /* Celeste detalles */
-    --brand-dark: #002a50;  /* Azul más oscuro para hover */
+    /* Variables Naves Del Sur */
+    --brand-blue: #004481;
+    --brand-light: #00a8e8;
+    --brand-dark: #002a50;
+    
+    /* Variables Navbar Tech */
+    --nav-bg: #0f172a;      
+    --nav-text: #f8fafc;    
+    --nav-accent: #38bdf8;  
+    --nav-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); 
+    
+    /* Variables de Geometría */
+    --nav-radius: 50px;     
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa; /* Fondo gris muy suave */
+    background-color: #f1f5f9;
+    padding-top: 0;
 }
 
-/* --- CLASES PERSONALIZADAS --- */
+/* --- CLASES PERSONALIZADAS BOOTSTRAP --- */
 .bg-custom-blue { background-color: var(--brand-blue) !important; }
 .text-custom-blue { color: var(--brand-blue) !important; }
 .text-custom-light { color: var(--brand-light) !important; }
 
-/* Botones */
+/* Botones Generales */
 .btn-primary {
     background-color: var(--brand-blue);
     border-color: var(--brand-blue);
     padding: 10px 25px;
+    font-weight: 500;
 }
 .btn-primary:hover {
     background-color: var(--brand-dark);
     border-color: var(--brand-dark);
 }
 
-/* Navbar */
-.navbar { padding: 1rem 0; }
-.nav-link { font-weight: 500; margin-right: 10px; transition: color 0.3s; }
-.nav-link.active { color: var(--brand-light) !important; font-weight: 700; }
+/* --- NAV BAR FLOTANTE (ESTILO CÁPSULA) --- */
+header.custom-header {
+    background-color: transparent; 
+    /* ABSOLUTE: Se queda quieta arriba y NO persigue al bajar */
+    position: absolute; 
+    top: 20px; 
+    width: 100%;
+    z-index: 1030;
+    pointer-events: none; /* Permite clicks a los lados de la cápsula */
+}
 
-/* Hero Section (Portada) */
-.hero-section {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80') no-repeat center center/cover;
-    height: 75vh;
+.custom-navbar {
+    background-color: var(--nav-bg); 
+    color: var(--nav-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem; /* Tamaño compacto */
+    width: 95%;            
+    max-width: 1200px;     
+    margin: 0 auto;        
+    border-radius: var(--nav-radius);
+    box-shadow: var(--nav-shadow);
+    pointer-events: auto; /* Reactiva clicks dentro de la barra */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo */
+.custom-logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
+.custom-logo:hover { color: var(--nav-text); }
+
+.logo-img {
+    height: 35px; 
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Enlaces Desktop */
+.custom-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.custom-nav-links li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: 0.95rem; 
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.custom-nav-links li a:hover,
+.custom-nav-links li a.active-link {
+    color: var(--nav-accent);
+}
+
+/* Punto indicador debajo del link */
+.custom-nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--nav-accent);
+    border-radius: 50%;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.custom-nav-links li a:hover::after,
+.custom-nav-links li a.active-link::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* Botón Contacto */
+.btn-nav-contacto {
+    background-color: var(--nav-accent);
+    color: var(--nav-bg) !important; 
+    border: none;
+    padding: 6px 20px;
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(56, 189, 248, 0.3); 
+    font-size: 0.9rem;
+}
+
+.btn-nav-contacto:hover {
+    background-color: #fff; 
+    color: var(--nav-bg) !important;
+    transform: translateY(-1px);
+}
+
+/* Botón Hamburguesa Móvil */
+.custom-menu-btn {
+    display: none;
+    color: var(--nav-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .custom-menu-btn { display: block; }
+    
+    .custom-nav-links {
+        position: absolute;
+        top: 120%; 
+        left: 0;
+        right: 0;
+        background-color: var(--nav-bg);
+        width: 100%;
+        border-radius: 20px; 
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    
+    .custom-nav-links.nav-active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* --- CORRECCIONES DE ESPACIADO Y TAMAÑOS --- */
+
+/* 1. PORTADA PRINCIPAL (INDEX) */
+.hero-section {
+    position: relative;
+    background: url('imagenes/portada.jpg') no-repeat center center/cover;
+    height: 85vh; 
+    display: flex;
+    align-items: center;
+    /* Subimos el bloque para que el fondo quede detrás de la barra */
+    margin-top: -100px; 
+    /* Padding MUY grande para bajar el texto y que no lo tape la barra */
+    padding-top: 180px; 
+}
+
 .hero-overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 68, 129, 0.85); /* Azul con transparencia */
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(0, 68, 129, 0.6));
 }
+
+/* Tamaño de Títulos CORREGIDO (Más chicos) */
+.hero-section h1.display-4 {
+    font-size: 3rem; /* Reducido de 4.5 a 3 */
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 2. CABECERAS INTERNAS (Páginas Secundarias) */
+.page-header {
+    background: var(--brand-blue);
+    color: white;
+    /* Subimos el bloque */
+    margin-top: -100px; 
+    /* Padding MUY grande arriba para destapar el título */
+    padding: 11rem 0 4rem 0; 
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Tamaño de Títulos Internos CORREGIDO */
+.page-header h1 {
+    font-size: 2.5rem; /* Reducido para que no sea gigante */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.page-header .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
 
 /* Cards y Efectos */
 .card { border: none; transition: transform 0.3s, box-shadow 0.3s; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
 
-/* Clientes (Logos B/N a Color) */
+/* Clientes */
 .client-logo {
     filter: grayscale(100%);
     opacity: 0.6;
@@ -56,12 +252,3 @@ body {
     max-height: 60px;
 }
 .client-logo:hover { filter: grayscale(0%); opacity: 1; }
-
-/* Cabeceras Internas */
-.page-header {
-    background: var(--brand-blue);
-    color: white;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-    text-align: center;
-}

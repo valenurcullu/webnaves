@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos | Naves Del Sur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue sticky-top shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-3" href="index.html">NAVES DEL <span class="text-custom-light">SUR</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3 px-3" href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <header class="custom-header">
+        <nav class="custom-navbar">
+            <a href="index.html" class="custom-logo">
+                <img src="/imagenes/favicon.png" alt="Logo" class="logo-img">
+                <span>NAVES DEL SUR</span>
+            </a>
+            <ul class="custom-nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html" class="active-link">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="contacto.html" class="btn-nav-contacto">Contacto</a></li>
+            </ul>
+            <button class="custom-menu-btn" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
     <header class="page-header">
         <div class="container">
@@ -35,7 +39,6 @@
     </header>
 
     <main class="container mb-5">
-        
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <p class="text-muted">Fabricamos bombas a tornillo excéntrico robustas y confiables. Seleccione la categoría para ver las especificaciones técnicas.</p>
@@ -43,124 +46,36 @@
         </div>
 
         <div class="row g-4">
-            
             <div class="col-md-6 col-lg-6">
                 <div class="card h-100 shadow-sm border-0 hover-card">
                     <div class="position-relative">
                         <img src="https://placehold.co/600x400?text=Bombas+Industriales" class="card-img-top" alt="Bombas Industriales a Tornillo">
-                        <div class="position-absolute top-0 end-0 bg-custom-blue text-white px-3 py-1 rounded-start m-3">
-                            Más Vendido
-                        </div>
+                        <div class="position-absolute top-0 end-0 bg-custom-blue text-white px-3 py-1 rounded-start m-3">Más Vendido</div>
                     </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <i class="bi bi-buildings fs-3 text-custom-light me-3"></i>
                             <h3 class="card-title fw-bold text-custom-blue mb-0">Bombas Industriales</h3>
                         </div>
-                        <p class="card-text text-secondary">
-                            Bombas a tornillo excéntrico diseñadas para el transporte de fluidos con sólidos en suspensión, viscosos o abrasivos.
-                        </p>
-                        <ul class="list-unstyled small text-muted mb-4">
-                            <li><i class="bi bi-check2 text-success me-2"></i>Aplicaciones: Efluentes, Papeleras, Minería.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Caudales constantes sin pulsaciones.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Mantenimiento simple y bajo costo.</li>
-                        </ul>
+                        <p class="card-text text-secondary">Bombas a tornillo excéntrico diseñadas para el transporte de fluidos con sólidos en suspensión...</p>
                         <a href="contacto.html" class="btn btn-outline-primary w-100">Solicitar Ficha Técnica</a>
                     </div>
                 </div>
             </div>
-
             <div class="col-md-6 col-lg-6">
                 <div class="card h-100 shadow-sm border-0 hover-card">
-                    <div class="position-relative">
-                        <img src="https://placehold.co/600x400?text=Bombas+Petroleras+(BCP)" class="card-img-top" alt="Bombas Petroleras BCP">
-                    </div>
+                    <div class="position-relative"><img src="https://placehold.co/600x400?text=Bombas+Petroleras+(BCP)" class="card-img-top" alt="Bombas Petroleras BCP"></div>
                     <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-fuel-pump fs-3 text-custom-light me-3"></i>
-                            <h3 class="card-title fw-bold text-custom-blue mb-0">Bombas Petroleras</h3>
-                        </div>
-                        <p class="card-text text-secondary">
-                            Sistemas BCP (Bombeo por Cavidad Progresiva) de superficie y de fondo. Equipos de alta resistencia para la extracción y transferencia de crudo.
-                        </p>
-                        <ul class="list-unstyled small text-muted mb-4">
-                            <li><i class="bi bi-check2 text-success me-2"></i>Transferencia de petróleo crudo y derivados.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Inyección de agua de formación.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Manejo de altos porcentajes de arena y gas.</li>
-                        </ul>
+                        <div class="d-flex align-items-center mb-3"><i class="bi bi-fuel-pump fs-3 text-custom-light me-3"></i><h3 class="card-title fw-bold text-custom-blue mb-0">Bombas Petroleras</h3></div>
+                        <p class="card-text text-secondary">Sistemas BCP de superficie y de fondo...</p>
                         <a href="contacto.html" class="btn btn-outline-primary w-100">Solicitar Ficha Técnica</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="card h-100 shadow-sm border-0 hover-card">
-                    <div class="position-relative">
-                        <img src="https://placehold.co/600x400?text=Bombas+Sanitarias" class="card-img-top" alt="Bombas Sanitarias Inoxidable">
-                    </div>
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-droplet-half fs-3 text-custom-light me-3"></i>
-                            <h3 class="card-title fw-bold text-custom-blue mb-0">Bombas Sanitarias</h3>
-                        </div>
-                        <p class="card-text text-secondary">
-                            Fabricadas en Acero Inoxidable, con diseño higiénico apto para limpieza CIP. Ideales para productos delicados que no deben sufrir emulsión.
-                        </p>
-                        <ul class="list-unstyled small text-muted mb-4">
-                            <li><i class="bi bi-check2 text-success me-2"></i>Industria Alimenticia y Bebidas.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Cosmética y Farmacéutica.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Materiales certificados FDA.</li>
-                        </ul>
-                        <a href="contacto.html" class="btn btn-outline-primary w-100">Solicitar Ficha Técnica</a>
-                    </div>
-                </div>
             </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="card h-100 shadow-sm border-0 hover-card">
-                    <div class="position-relative">
-                        <img src="https://placehold.co/600x400?text=Bombas+Dosificadoras" class="card-img-top" alt="Bombas Dosificadoras">
-                    </div>
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-sliders fs-3 text-custom-light me-3"></i>
-                            <h3 class="card-title fw-bold text-custom-blue mb-0">Bombas Dosificadoras</h3>
-                        </div>
-                        <p class="card-text text-secondary">
-                            Precisión absoluta en la dosificación de productos químicos y aditivos. Caudales bajos con alta repetibilidad.
-                        </p>
-                        <ul class="list-unstyled small text-muted mb-4">
-                            <li><i class="bi bi-check2 text-success me-2"></i>Tratamiento de aguas.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Procesos químicos industriales.</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i>Ajuste de caudal preciso.</li>
-                        </ul>
-                        <a href="contacto.html" class="btn btn-outline-primary w-100">Solicitar Ficha Técnica</a>
-                    </div>
-                </div>
-            </div>
-
-        </div> <div class="row mt-5">
-            <div class="col-12">
-                <div class="bg-light p-5 rounded border-start border-5 border-primary">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <h3>¿Busca Repuestos Legítimos?</h3>
-                            <p class="mb-0">Fabricamos <strong>Rotores y Estatores</strong> para toda nuestra línea GECE PUMPS® y modelos compatibles. Stock permanente para minimizar paradas de planta.</p>
-                        </div>
-                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                            <a href="contacto.html" class="btn btn-primary">Consultar por Repuestos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </main>
 
-    <footer class="bg-dark text-white py-3 mt-auto text-center">
-        <p class="mb-0 small">&copy; 2025 Naves Del Sur.</p>
-    </footer>
-
+    <footer class="bg-dark text-white py-3 mt-auto text-center"><p class="mb-0 small">&copy; 2025 Naves Del Sur.</p></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
