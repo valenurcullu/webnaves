@@ -252,3 +252,72 @@ header.custom-header {
     max-height: 60px;
 }
 .client-logo:hover { filter: grayscale(0%); opacity: 1; }
+
+/* --- ESTILOS CARRUSEL DE CLIENTES --- */
+
+.slider-container {
+    overflow: hidden;
+    background: white;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Sombra blanca a los costados para efecto de desvanecimiento */
+.slider-container::before,
+.slider-container::after {
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+    top: 0;
+}
+.slider-container::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+.slider-container::before {
+    left: 0;
+}
+
+/* La pista que se mueve */
+.slide-track {
+    display: flex;
+    width: calc(250px * 14); /* 250px por número total de logos duplicados */
+    animation: scroll 40s linear infinite; /* 40s es la velocidad (más alto = más lento) */
+}
+
+.slide-track:hover {
+    animation-play-state: paused; /* Se detiene si pasas el mouse */
+}
+
+/* Cada logo individual */
+.slide {
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Espacio entre logos */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    /* Aseguramos que se vean a color */
+    filter: none !important; 
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.1); /* Pequeño zoom al pasar el mouse */
+}
+
+/* La animación matemática */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); } /* Debe ser la mitad del total de logos */
+}
