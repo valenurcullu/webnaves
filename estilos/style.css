@@ -386,3 +386,62 @@ header.custom-header {
 .back-link:hover i {
     transform: translateX(-5px); 
 }
+
+/* --- ESTILOS DEL DROPDOWN --- */
+
+/* 1. Preparamos el contenedor padre */
+.dropdown-item {
+    position: relative; /* Para que el menú se ubique respecto a este botón */
+}
+
+/* 2. El menú desplegable (Oculto por defecto) */
+.dropdown-menu-hover {
+    display: none;             /* Oculto */
+    position: absolute;        /* Flotando sobre el contenido */
+    top: 100%;                 /* Justo debajo del botón */
+    left: 0;
+    background-color: rgba(11, 28, 44, 0.95); /* Color oscuro (azul noche) con transparencia */
+    min-width: 200px;          /* Ancho mínimo para que entren los textos */
+    list-style: none;          /* Sin puntitos */
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 0 0 8px 8px; /* Bordes redondeados abajo */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra elegante */
+    z-index: 1000;             /* Asegura que quede por encima de todo */
+    backdrop-filter: blur(5px); /* Efecto difuminado moderno */
+}
+
+/* 3. Estilo de los enlaces dentro del menú */
+.dropdown-menu-hover li a {
+    display: block;            /* Ocupa todo el ancho */
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.8) !important; /* Blanco suave */
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Línea divisoria sutil */
+    transition: all 0.3s ease;
+}
+
+/* Quitar borde al último elemento */
+.dropdown-menu-hover li:last-child a {
+    border-bottom: none;
+}
+
+/* 4. Efecto al pasar el mouse por las opciones */
+.dropdown-menu-hover li a:hover {
+    background-color: #0d6efd; /* Azul primario (Bootstrap) */
+    color: #ffffff !important;
+    padding-left: 25px;        /* Pequeño movimiento a la derecha */
+}
+
+/* 5. LA MAGIA: Mostrar el menú al pasar el mouse sobre "Productos" */
+.dropdown-item:hover .dropdown-menu-hover {
+    display: block;
+    animation: fadeIn 0.3s ease; /* Pequeña animación de entrada */
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
