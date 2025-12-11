@@ -358,3 +358,31 @@ header.custom-header {
         right: 20px;
     }
 }
+
+/* Estilo para el botón de volver */
+.back-link {
+    display: inline-flex;       /* Alinea flecha y texto perfectamente */
+    align-items: center;        /* Centra verticalmente */
+    color: rgba(255, 255, 255, 0.7); /* Blanco con transparencia (parecido al text-white-50) */
+    text-decoration: none;      /* Sin subrayado por defecto */
+    font-weight: 600;           /* Letra un poco más gruesa (Semi-bold) */
+    font-size: 1.1rem;          /* Un pelín más grande para que se lea fácil */
+    transition: all 0.3s ease;  /* Suaviza el cambio de color */
+}
+
+/* Espacio entre la flecha y el texto */
+.back-link i {
+    margin-right: 8px;          
+    transition: transform 0.3s ease; /* Suaviza el movimiento de la flecha */
+}
+
+/* EFECTO AL PASAR EL MOUSE (HOVER) */
+.back-link:hover {
+    color: #ffffff;             /* Se vuelve blanco brillante */
+    text-decoration: none;      /* Nos aseguramos que no aparezca la línea */
+}
+
+/* Aquí está la magia: Mover la flecha a la izquierda */
+.back-link:hover i {
+    transform: translateX(-5px); 
+}
