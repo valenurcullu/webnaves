@@ -445,3 +445,19 @@ header.custom-header {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Estilos para el video en loop de Nosotros 
+/*
+.video-loop {
+    width: 100%;
+    height: auto;        Mantiene la proporción original del video 
+    display: block;      Elimina espacios en blanco extra debajo del video 
+    object-fit: cover;   Asegura que el video cubra el espacio sin deformarse 
+    max-height: 500px;   opcional: limita la altura para que no sea gigante en pantallas grandes 
+}
+
+ Mantenemos el efecto hover que tenías en la imagen si quieres 
+.video-loop:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}/*
