@@ -38,12 +38,12 @@ body {
     border-color: var(--brand-dark);
 }
 
-/* --- NAV BAR FLOTANTE (ESTILO CÁPSULA) --- */
+/* --- NAV BAR FLOTANTE (ESTILO CÁPSULA - AGRANDADO) --- */
 header.custom-header {
     background-color: transparent; 
     /* ABSOLUTE: Se queda quieta arriba y NO persigue al bajar */
     position: absolute; 
-    top: 20px; 
+    top: 25px; /* Bajamos un poco más la barra */
     width: 100%;
     z-index: 1030;
     pointer-events: none; /* Permite clicks a los lados de la cápsula */
@@ -55,9 +55,10 @@ header.custom-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.7rem 2rem; /* Tamaño compacto */
+    /* Padding aumentado para hacer la barra más alta */
+    padding: 1rem 2.5rem; 
     width: 95%;            
-    max-width: 1200px;     
+    max-width: 1250px; /* Permitimos que sea un poco más ancha */    
     margin: 0 auto;        
     border-radius: var(--nav-radius);
     box-shadow: var(--nav-shadow);
@@ -72,7 +73,7 @@ header.custom-header {
     text-decoration: none;
     color: var(--nav-text);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Fuente del logo aumentada */
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
@@ -80,16 +81,16 @@ header.custom-header {
 .custom-logo:hover { color: var(--nav-text); }
 
 .logo-img {
-    height: 35px; 
+    height: 45px; /* Logo aumentado */
     width: auto;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
 /* Enlaces Desktop */
 .custom-nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Más espacio entre los links */
     margin: 0;
     padding: 0;
     align-items: center;
@@ -98,7 +99,7 @@ header.custom-header {
 .custom-nav-links li a {
     text-decoration: none;
     color: var(--nav-text);
-    font-size: 0.95rem; 
+    font-size: 1.1rem; /* Fuente de los links aumentada */
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -114,11 +115,11 @@ header.custom-header {
 .custom-nav-links li a::after {
     content: '';
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 6px; /* Punto un poco más grande */
+    height: 6px;
     background-color: var(--nav-accent);
     border-radius: 50%;
-    bottom: -4px;
+    bottom: -6px;
     left: 50%;
     transform: translateX(-50%) scale(0);
     transition: transform 0.3s ease;
@@ -134,12 +135,12 @@ header.custom-header {
     background-color: var(--nav-accent);
     color: var(--nav-bg) !important; 
     border: none;
-    padding: 6px 20px;
+    padding: 10px 25px; /* Botón más grande */
     border-radius: 50px; 
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(56, 189, 248, 0.3); 
-    font-size: 0.9rem;
+    font-size: 1rem; /* Texto del botón más grande */
 }
 
 .btn-nav-contacto:hover {
@@ -445,19 +446,3 @@ header.custom-header {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-/* Estilos para el video en loop de Nosotros 
-/*
-.video-loop {
-    width: 100%;
-    height: auto;        Mantiene la proporción original del video 
-    display: block;      Elimina espacios en blanco extra debajo del video 
-    object-fit: cover;   Asegura que el video cubra el espacio sin deformarse 
-    max-height: 500px;   opcional: limita la altura para que no sea gigante en pantallas grandes 
-}
-
- Mantenemos el efecto hover que tenías en la imagen si quieres 
-.video-loop:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-}/*
