@@ -1,7 +1,7 @@
 // --- script.js ---
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. LOGICA MENU MÓVIL (Nueva Navbar)
+    // 1. LOGICA MENU MÓVIL (Navbar)
     const menuBtn = document.getElementById('mobile-menu');
     const navLinksContainer = document.getElementById('navLinks');
 
@@ -18,14 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. MARCAR ENLACE ACTIVO AUTOMÁTICAMENTE
-    // Nota: Busca links dentro de .custom-nav-links en lugar de .navbar-nav
+    // 2. MARCAR ENLACE ACTIVO AUTOMÁTICAMENTE (CORREGIDO)
     const currentLocation = location.href;
     const menuItems = document.querySelectorAll('.custom-nav-links a');
     
     menuItems.forEach(item => {
+        // PASO CLAVE: Primero removemos la clase 'active-link' de TODOS los items
+        // Esto soluciona que "Inicio" se quede pintado siempre.
+        item.classList.remove("active-link");
+
+        // Luego, si el link coincide con la página actual, se la agregamos
         if(item.href === currentLocation) {
             item.classList.add("active-link");
+            
+            // (Opcional) Si el link está dentro de un dropdown (ej: un producto), 
+            // pintamos también el botón padre "Productos" para que quede prolijo.
+            const parentDropdown = item.closest('.dropdown-item');
+            if (parentDropdown) {
+                 // Buscamos el primer link dentro del dropdown (que sería el título "Productos")
+                 const parentLink = parentDropdown.querySelector('a'); 
+                 if(parentLink) parentLink.classList.add('active-link');
+            }
         }
     });
 
