@@ -446,3 +446,81 @@ header.custom-header {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* --- LOGO FOOTER MEGA (Estilo "Protagonista") --- */
+.footer-logo-mega {
+    /* ANCHO: Le decimos que ocupe el 90% del ancho de su columna */
+    /* Esto hará que crezca todo lo que le permita el espacio (col-md-4) */
+    width: 90%; 
+    
+    /* Tope máximo para que no se vea pixelado en pantallas gigantes (4K) */
+    max-width: 380px; 
+    
+    /* ALTURA: Automática para que no se deforme al crecer a lo ancho */
+    height: auto; 
+    
+    /* Ajustes visuales */
+    object-fit: contain;
+    display: block;
+    
+    /* En celulares, lo centramos */
+    margin: 0 auto; 
+}
+
+/* Ajuste específico para escritorio (PC) */
+@media (min-width: 768px) {
+    .footer-logo-mega {
+        margin: 0; /* A la izquierda en PC */
+        width: 100%; /* Aprovecha todo el ancho disponible */
+    }
+}
+
+/* --- AJUSTE DE TEXTO DEBAJO DEL LOGO --- */
+/* Esto es clave para la "proporción". Agrandamos un poco la descripción */
+.footer-description {
+    font-size: 0.95rem; /* Un poquito más grande que el resto */
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 90%; /* Para que el texto no se estire tanto */
+}
+
+/* Imágenes de certificación a la derecha */
+.footer-cert-img {
+    height: 60px; /* Tamaño reducido para que entren bien una arriba de la otra */
+    width: auto;
+}
+
+.footer-iso-container {
+    height: 60px; 
+    width: 60px;
+    padding: 5px !important;
+}
+
+/* Ajuste de fuentes para que todo quepa en una sola línea de columnas */
+footer p {
+    font-size: 0.85rem;
+}
+/* --- IMÁGENES DE CERTIFICACIÓN (DERECHA) --- */
+
+/* Logo "Hecho en Argentina" */
+.footer-cert-img {
+    height: 90px; /* AUMENTADO de 60px a 90px */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor blanco del logo ISO */
+.footer-iso-container {
+    height: 90px; /* AUMENTADO de 60px a 90px */
+    width: 90px;  /* AUMENTADO para que sea cuadrado */
+    padding: 5px !important;
+    background-color: white;
+    border-radius: 8px; /* Un poquito de borde redondeado queda mejor */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto opcional: que crezcan un poquito al pasar el mouse */
+.footer-cert-img:hover, 
+.footer-iso-container:hover {
+    transform: scale(1.1);
+}
