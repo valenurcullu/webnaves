@@ -55,39 +55,36 @@ header.custom-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Padding aumentado para hacer la barra más alta */
+    /* Padding ajustado para compensar el logo más grande */
     padding: 0.5rem 2.5rem;
-    width: 95%;            
-    max-width: 1250px; /* Permitimos que sea un poco más ancha */    
-    margin: 0 auto;        
+    width: 95%;             
+    max-width: 1250px; /* Permitimos que sea un poco más ancha */     
+    margin: 0 auto;         
     border-radius: var(--nav-radius);
     box-shadow: var(--nav-shadow);
     pointer-events: auto; /* Reactiva clicks dentro de la barra */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Logo */
+/* Logo Navbar */
 .custom-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--nav-text);
     font-weight: 700;
-    font-size: 1.4rem; /* Fuente del logo aumentada */
+    font-size: 1.4rem; 
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
 }
 .custom-logo:hover { color: var(--nav-text); }
 
-/* Busca esta parte en tu código y cambiala por esto: */
-
+/* IMAGEN DEL LOGO (Agrandado) */
 .logo-img {
-    height: 70px;  /* <--- ACÁ ESTÁ LA CLAVE (Antes era 45px) */
-    width: auto;   /* Esto mantiene la proporción para que no se deforme */
+    height: 70px;  /* Altura aumentada */
+    width: auto;   
     margin-right: 12px;
-    
-    /* Opcional: Agregamos esto para que si la imagen tarda en cargar no salte todo */
     display: block; 
 }
 
@@ -133,6 +130,14 @@ header.custom-header {
 .custom-nav-links li a:hover::after,
 .custom-nav-links li a.active-link::after {
     transform: translateX(-50%) scale(1);
+}
+
+/* Ajuste del icono del mundo (Idioma) */
+.custom-nav-links .fa-globe {
+    transition: transform 0.3s ease;
+}
+.custom-nav-links a:hover .fa-globe {
+    transform: rotate(15deg); /* Pequeña animación al pasar el mouse */
 }
 
 /* Botón Contacto */
@@ -194,7 +199,7 @@ header.custom-header {
     }
 }
 
-/* --- CORRECCIONES DE ESPACIADO Y TAMAÑOS --- */
+/* --- SECCIONES PRINCIPALES --- */
 
 /* 1. PORTADA PRINCIPAL (INDEX) */
 .hero-section {
@@ -214,9 +219,9 @@ header.custom-header {
     background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(0, 68, 129, 0.6));
 }
 
-/* Tamaño de Títulos CORREGIDO (Más chicos) */
+/* Tamaño de Títulos */
 .hero-section h1.display-4 {
-    font-size: 3rem; /* Reducido de 4.5 a 3 */
+    font-size: 3rem; 
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
@@ -233,9 +238,8 @@ header.custom-header {
     text-align: center;
 }
 
-/* Tamaño de Títulos Internos CORREGIDO */
 .page-header h1 {
-    font-size: 2.5rem; /* Reducido para que no sea gigante */
+    font-size: 2.5rem; 
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -269,7 +273,6 @@ header.custom-header {
     width: 100%;
 }
 
-/* Sombra blanca a los costados para efecto de desvanecimiento */
 .slider-container::before,
 .slider-container::after {
     background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
@@ -288,73 +291,69 @@ header.custom-header {
     left: 0;
 }
 
-/* La pista que se mueve */
 .slide-track {
     display: flex;
-    width: calc(250px * 14); /* 250px por número total de logos duplicados */
-    animation: scroll 40s linear infinite; /* 40s es la velocidad (más alto = más lento) */
+    width: calc(250px * 14); 
+    animation: scroll 40s linear infinite; 
 }
 
 .slide-track:hover {
-    animation-play-state: paused; /* Se detiene si pasas el mouse */
+    animation-play-state: paused; 
 }
 
-/* Cada logo individual */
 .slide {
     height: 100px;
     width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px; /* Espacio entre logos */
+    padding: 0 20px; 
 }
 
 .slide img {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
-    /* Aseguramos que se vean a color */
     filter: none !important; 
     transition: transform 0.3s ease;
 }
 
 .slide img:hover {
-    transform: scale(1.1); /* Pequeño zoom al pasar el mouse */
+    transform: scale(1.1); 
 }
 
-/* La animación matemática */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 7)); } /* Debe ser la mitad del total de logos */
+    100% { transform: translateX(calc(-250px * 7)); } 
 }
+
 /* --- BOTÓN FLOTANTE DE WHATSAPP --- */
 .btn-whatsapp {
-    position: fixed; /* Se queda fijo al hacer scroll */
-    bottom: 30px;    /* Distancia desde abajo */
-    right: 30px;     /* Distancia desde la derecha */
+    position: fixed; 
+    bottom: 30px;    
+    right: 30px;     
     width: 60px;
     height: 60px;
-    background-color: #25d366; /* Color oficial WhatsApp */
+    background-color: #25d366; 
     color: white;
-    border-radius: 50%; /* Lo hace redondo */
+    border-radius: 50%; 
     text-align: center;
-    font-size: 35px; /* Tamaño del icono */
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombra para resaltar */
-    z-index: 1000;   /* Asegura que esté siempre encima de todo */
+    font-size: 35px; 
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3); 
+    z-index: 1000;   
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: all 0.3s ease; /* Suaviza la animación */
+    transition: all 0.3s ease; 
 }
 
 .btn-whatsapp:hover {
-    background-color: #128c7e; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.1);     /* Crece un poquito */
-    color: white;              /* Mantiene el icono blanco */
+    background-color: #128c7e; 
+    transform: scale(1.1);     
+    color: white;              
 }
 
-/* Ajuste para celulares: un poco más chico y pegado al borde */
 @media (max-width: 768px) {
     .btn-whatsapp {
         width: 50px;
@@ -367,164 +366,131 @@ header.custom-header {
 
 /* Estilo para el botón de volver */
 .back-link {
-    display: inline-flex;       /* Alinea flecha y texto perfectamente */
-    align-items: center;        /* Centra verticalmente */
-    color: rgba(255, 255, 255, 0.7); /* Blanco con transparencia (parecido al text-white-50) */
-    text-decoration: none;      /* Sin subrayado por defecto */
-    font-weight: 600;           /* Letra un poco más gruesa (Semi-bold) */
-    font-size: 1.1rem;          /* Un pelín más grande para que se lea fácil */
-    transition: all 0.3s ease;  /* Suaviza el cambio de color */
+    display: inline-flex;       
+    align-items: center;        
+    color: rgba(255, 255, 255, 0.7); 
+    text-decoration: none;      
+    font-weight: 600;           
+    font-size: 1.1rem;          
+    transition: all 0.3s ease;  
 }
 
-/* Espacio entre la flecha y el texto */
 .back-link i {
     margin-right: 8px;          
-    transition: transform 0.3s ease; /* Suaviza el movimiento de la flecha */
+    transition: transform 0.3s ease; 
 }
 
-/* EFECTO AL PASAR EL MOUSE (HOVER) */
 .back-link:hover {
-    color: #ffffff;             /* Se vuelve blanco brillante */
-    text-decoration: none;      /* Nos aseguramos que no aparezca la línea */
+    color: #ffffff;             
+    text-decoration: none;      
 }
 
-/* Aquí está la magia: Mover la flecha a la izquierda */
 .back-link:hover i {
     transform: translateX(-5px); 
 }
 
 /* --- ESTILOS DEL DROPDOWN --- */
 
-/* 1. Preparamos el contenedor padre */
 .dropdown-item {
-    position: relative; /* Para que el menú se ubique respecto a este botón */
+    position: relative; 
 }
 
-/* 2. El menú desplegable (Oculto por defecto) */
 .dropdown-menu-hover {
-    display: none;             /* Oculto */
-    position: absolute;        /* Flotando sobre el contenido */
-    top: 100%;                 /* Justo debajo del botón */
+    display: none;             
+    position: absolute;        
+    top: 100%;                 
     left: 0;
-    background-color: rgba(11, 28, 44, 0.95); /* Color oscuro (azul noche) con transparencia */
-    min-width: 200px;          /* Ancho mínimo para que entren los textos */
-    list-style: none;          /* Sin puntitos */
+    background-color: rgba(11, 28, 44, 0.95); 
+    min-width: 200px;          
+    list-style: none;          
     padding: 10px 0;
     margin: 0;
-    border-radius: 0 0 8px 8px; /* Bordes redondeados abajo */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra elegante */
-    z-index: 1000;             /* Asegura que quede por encima de todo */
-    backdrop-filter: blur(5px); /* Efecto difuminado moderno */
+    border-radius: 0 0 8px 8px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
+    z-index: 1000;             
+    backdrop-filter: blur(5px); 
 }
 
-/* 3. Estilo de los enlaces dentro del menú */
 .dropdown-menu-hover li a {
-    display: block;            /* Ocupa todo el ancho */
+    display: block;            
     padding: 12px 20px;
-    color: rgba(255, 255, 255, 0.8) !important; /* Blanco suave */
+    color: rgba(255, 255, 255, 0.8) !important; 
     text-decoration: none;
     font-size: 0.95rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05); /* Línea divisoria sutil */
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
     transition: all 0.3s ease;
 }
 
-/* Quitar borde al último elemento */
 .dropdown-menu-hover li:last-child a {
     border-bottom: none;
 }
 
-/* 4. Efecto al pasar el mouse por las opciones */
 .dropdown-menu-hover li a:hover {
-    background-color: #0d6efd; /* Azul primario (Bootstrap) */
+    background-color: #0d6efd; 
     color: #ffffff !important;
-    padding-left: 25px;        /* Pequeño movimiento a la derecha */
+    padding-left: 25px;        
 }
 
-/* 5. LA MAGIA: Mostrar el menú al pasar el mouse sobre "Productos" */
 .dropdown-item:hover .dropdown-menu-hover {
     display: block;
-    animation: fadeIn 0.3s ease; /* Pequeña animación de entrada */
+    animation: fadeIn 0.3s ease; 
 }
 
-/* Animación suave */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- LOGO FOOTER MEGA (Estilo "Protagonista") --- */
+/* --- FOOTER Y LOGOS --- */
+
 .footer-logo-mega {
-    /* ANCHO: Le decimos que ocupe el 90% del ancho de su columna */
-    /* Esto hará que crezca todo lo que le permita el espacio (col-md-4) */
     width: 90%; 
-    
-    /* Tope máximo para que no se vea pixelado en pantallas gigantes (4K) */
     max-width: 380px; 
-    
-    /* ALTURA: Automática para que no se deforme al crecer a lo ancho */
     height: auto; 
-    
-    /* Ajustes visuales */
     object-fit: contain;
     display: block;
-    
-    /* En celulares, lo centramos */
     margin: 0 auto; 
 }
 
-/* Ajuste específico para escritorio (PC) */
 @media (min-width: 768px) {
     .footer-logo-mega {
-        margin: 0; /* A la izquierda en PC */
-        width: 100%; /* Aprovecha todo el ancho disponible */
+        margin: 0; 
+        width: 100%; 
     }
 }
 
-/* --- AJUSTE DE TEXTO DEBAJO DEL LOGO --- */
-/* Esto es clave para la "proporción". Agrandamos un poco la descripción */
 .footer-description {
-    font-size: 0.95rem; /* Un poquito más grande que el resto */
+    font-size: 0.95rem; 
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
-    max-width: 90%; /* Para que el texto no se estire tanto */
+    max-width: 90%; 
 }
 
-/* Imágenes de certificación a la derecha */
-.footer-cert-img {
-    height: 60px; /* Tamaño reducido para que entren bien una arriba de la otra */
-    width: auto;
-}
-
-.footer-iso-container {
-    height: 60px; 
-    width: 60px;
-    padding: 5px !important;
-}
-
-/* Ajuste de fuentes para que todo quepa en una sola línea de columnas */
 footer p {
     font-size: 0.85rem;
 }
+
 /* --- IMÁGENES DE CERTIFICACIÓN (DERECHA) --- */
 
-/* Logo "Hecho en Argentina" */
+/* Logo "Hecho en Argentina" - Un poco más chico para contraste */
 .footer-cert-img {
-    height: 90px; /* AUMENTADO de 60px a 90px */
+    height: 80px; /* Reducido de 90 a 80 */
     width: auto;
     transition: transform 0.3s ease;
+    margin-bottom: 5px; /* Espacio para separar */
 }
 
-/* Contenedor blanco del logo ISO */
+/* Contenedor ISO - SIN FONDO BLANCO y MAS GRANDE */
 .footer-iso-container {
-    height: 90px; /* AUMENTADO de 60px a 90px */
-    width: 90px;  /* AUMENTADO para que sea cuadrado */
-    padding: 5px !important;
-    background-color: white;
-    border-radius: 8px; /* Un poquito de borde redondeado queda mejor */
+    width: 250px;     /* Aumentado considerablemente */
+    height: auto;     /* Altura automática */
+    padding: 0 !important;
+    background-color: transparent !important; /* Fuerza la transparencia */
+    border-radius: 0;
     transition: transform 0.3s ease;
 }
 
-/* Efecto opcional: que crezcan un poquito al pasar el mouse */
+/* Efecto hover */
 .footer-cert-img:hover, 
 .footer-iso-container:hover {
     transform: scale(1.1);
