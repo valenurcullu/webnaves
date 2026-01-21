@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naves Del Sur</title> 
+    <title>Naves Del Sur | Servicios</title> 
 
     <link href="./estilos/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="./estilos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    
-     <header class="custom-header">
+
+    <header class="custom-header">
         <nav class="custom-navbar">
             <a href="index.html" class="custom-logo">
                 <img src="./imagenes/naves3.png" alt="Logo" class="logo-img">
@@ -24,11 +22,8 @@
             <ul class="custom-nav-links" id="navLinks">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                
                 <li class="dropdown-item">
-                    <a href="productos.html">
-                        Productos <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;"></i>
-                    </a>
+                    <a href="productos.html">Productos <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
                     <ul class="dropdown-menu-hover">
                         <li><a href="bombas-industriales.html">Industriales</a></li>
                         <li><a href="bombas-petroleras.html">Petroleras</a></li>
@@ -38,19 +33,16 @@
                 </li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="clientes.html">Clientes</a></li>
-                
                 <li><a href="contacto.html" class="btn-nav-contacto">Contacto</a></li>
-
                 <li class="dropdown-item">
                     <a href="#" class="d-flex align-items-center">
-                        <i class="fas fa-globe me-2" style="color: #38bdf8; font-size: 1.1rem;"></i> 
-                        ES <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;"></i>
+                        <i class="fas fa-globe me-2" style="color: #38bdf8; font-size: 1.1rem;"></i> ES <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;"></i>
                     </a>
-                    <ul class="dropdown-menu-hover" style="min-width: 130px; left: -50px;"> <li><a href="#" class="fw-bold">Español</a></li>
+                    <ul class="dropdown-menu-hover" style="min-width: 130px; left: -50px;"> 
+                        <li><a href="#" class="fw-bold">Español</a></li>
                         <li><a href="#" style="opacity: 0.7;">English</a></li>
                     </ul>
                 </li>
-                
             </ul>
             <button class="custom-menu-btn" id="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -60,174 +52,134 @@
 
     <header class="page-header">
         <div class="container">
-            <h1>Servicios Técnicos</h1>
-            <p class="lead">Mantenimiento preventivo, correctivo e ingeniería aplicada.</p>
+            <h1 data-aos="fade-down" data-aos-duration="1000">Nuestros Servicios</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Soluciones integrales para la industria</p>
         </div>
     </header>
 
-    <main class="container mb-5">
+    <main class="container mb-5 overflow-hidden">
         
-        <div class="row align-items-center mb-5 pb-5 border-bottom">
-            <div class="col-md-6">
-                <h2 class="text-primary fw-bold mb-3">Reparación Integral</h2>
-                <p class="lead text-muted">Contamos con un taller equipado con banco de pruebas hidráulicas.</p>
-                <p>Reparamos bombas de todas las marcas y modelos, asegurando el rendimiento original del equipo.</p>
-                
-                <ul class="list-group list-group-flush mt-3">
-                    <li class="list-group-item bg-transparent px-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Rebobinado de motores.</li>
-                    <li class="list-group-item bg-transparent px-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Balanceo dinámico.</li>
-                    <li class="list-group-item bg-transparent px-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Fabricación de repuestos.</li>
-                </ul>
+        <div class="row align-items-center service-section mb-5" data-aos="fade-right">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="text-custom-blue fw-bold">Reparaciones de Equipos</h2>
+                <p>Contamos con un sector especializado en reparaciones de equipos de nuestra fabricación y de otros fabricantes. Brindamos un servicio integral de reacondicionamiento <strong>garantizando repuestos de alta calidad</strong>.</p>
             </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-                <img src="./imagenes/fabricaimg/Nosotros6.JPG" class="img-fluid rounded shadow" alt="Taller">
+            <div class="col-lg-6">
+                <img src="./imagenes/reparacionBomba.jpg" class="img-fluid rounded shadow hover-card service-img" alt="Asesoramiento técnico">
             </div>
         </div>
-        
-        <div class="row g-5">
-            <div class="col-12 text-center mb-2">
-                <h3 class="fw-bold">Nuestras Soluciones</h3>
-                <p class="text-muted">Servicios especializados para cada etapa de su proyecto</p>
-            </div>
 
-            <div class="col-md-6 d-flex align-items-start">
-                <div class="flex-shrink-0 me-3">
-                    <i class="fa-solid fa-user-tie fa-3x text-primary"></i>
-                </div>
-                <div>
-                    <h4 class="h5 fw-bold text-uppercase">Asesoramiento a su Medida</h4>
-                    <p class="small text-secondary">Personal altamente capacitado para brindarle el mejor asesoramiento, ya sea telefónicamente o en sus instalaciones. Más de 30 años de experiencia.</p>
-                </div>
+        <div class="row align-items-center service-section mb-5 flex-lg-row-reverse" data-aos="fade-left">
+            <div class="col-lg-6 mb-4 mb-lg-0 px-lg-5">
+                <h2 class="text-custom-blue fw-bold">Puesta en Marcha</h2>
+                <p>Ofrecemos asistencia técnica especializada en la puesta en marcha de equipos y capacitación in-situ de su personal de operaciones y mantenimiento, garantizando un funcionamiento óptimo desde el primer día.</p>
             </div>
-
-            <div class="col-md-6 d-flex align-items-start">
-                <div class="flex-shrink-0 me-3">
-                    <i class="fa-solid fa-gears fa-3x text-primary"></i>
-                </div>
-                <div>
-                    <h4 class="h5 fw-bold text-uppercase">Puesta en Marcha</h4>
-                    <p class="small text-secondary">Asistencia técnica especializada en la puesta en marcha de equipos y capacitación in-situ de su personal de operaciones y mantenimiento.</p>
-                </div>
+            <div class="col-lg-6">
+                <img src="./imagenes/fabricaimg/Nosotros4.JPG" class="img-fluid rounded shadow hover-card service-img" alt="Puesta en marcha de equipos">
             </div>
-
-            <div class="col-md-6 d-flex align-items-start">
-                <div class="flex-shrink-0 me-3">
-                    <i class="fa-solid fa-screwdriver-wrench fa-3x text-primary"></i>
-                </div>
-                <div>
-                    <h4 class="h5 fw-bold text-uppercase">Reparaciones de Equipos</h4>
-                    <p class="small text-secondary">Sector especializado en reparaciones de equipos de nuestra fabricación y de otros fabricantes, garantizando repuestos de calidad.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 d-flex align-items-start">
-                <div class="flex-shrink-0 me-3">
-                    <i class="fa-solid fa-drafting-compass fa-3x text-primary"></i>
-                </div>
-                <div>
-                    <h4 class="h5 fw-bold text-uppercase">Ingeniería a su Disposición</h4>
-                    <p class="small text-secondary">Elaboración de planos 3D y Data Books (Especificaciones, Procedimientos, Calificaciones, Protocolos de ensayos) para integración en proyectos.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 d-flex align-items-start">
-                <div class="flex-shrink-0 me-3">
-                    <i class="fa-solid fa-truck-fast fa-3x text-primary"></i>
-                </div>
-                <div>
-                    <h4 class="h5 fw-bold text-uppercase">Entregas a Domicilio</h4>
-                    <p class="small text-secondary">Realizamos entregas en las instalaciones de nuestros clientes o transportes dentro de C.A.B.A. y Gran Buenos Aires.</p>
-                </div>
-            </div>
-
         </div>
+
+        <div class="row align-items-center service-section mb-5" data-aos="fade-right">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="text-custom-blue fw-bold">Asesoramiento a su Medida</h2>
+                <p>Personal altamente capacitado para brindarle el mejor asesoramiento, ya sea telefónicamente o en sus instalaciones. Contamos con <strong>más de 30 años de experiencia</strong> en el sector, asegurando la solución técnica más eficiente para sus necesidades.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="./imagenes/fabricaimg/Nosotros3.JPG" class="img-fluid rounded shadow hover-card service-img" alt="Reparación de bombas">
+            </div>
+        </div>
+
+        <div class="row align-items-center service-section mb-5 flex-lg-row-reverse" data-aos="fade-left">
+            <div class="col-lg-6 mb-4 mb-lg-0 px-lg-5">
+                <h2 class="text-custom-blue fw-bold">Ingeniería a su Disposición</h2>
+                <p>Elaboración de <strong>planos 3D y Data Books</strong> completos (Especificaciones, Procedimientos, Calificaciones, Protocolos de ensayos) diseñados para una integración perfecta en sus proyectos de ingeniería.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="./imagenes/fabricaimg/Nosotros2.JPG" class="img-fluid rounded shadow hover-card service-img" alt="Ingeniería y planos 3D">
+            </div>
+        </div>
+
+        <div class="row align-items-center service-section mb-5" data-aos="fade-right">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="text-custom-blue fw-bold">Entregas a Domicilio</h2>
+                <p>Realizamos entregas en las instalaciones de nuestros clientes o transportes dentro de <strong>C.A.B.A. y Gran Buenos Aires</strong>, asegurando que los equipos lleguen a destino en tiempo y forma.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="./imagenes/fabricaimg/Nosotros1.JPG" class="img-fluid rounded shadow hover-card service-img" alt="Logística y entregas">
+            </div>
+        </div>
+
     </main>
 
     <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
-    <div class="container text-center text-md-start">
-        <div class="row">
-            
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                <a href="index.html" class="text-decoration-none w-100">
-                    <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
-                </a>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
-                    <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
-                    <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
-                    <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Dosificadoras</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
-                
-                <div class="d-flex align-items-start mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-home text-primary"></i>
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <a href="index.html" class="text-decoration-none w-100">
+                        <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
+                    </a>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
+                        <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Dosificadoras</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
+                    <div class="d-flex align-items-start mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-home text-primary"></i></div>
+                        <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
                     </div>
-                    <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-envelope text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-envelope text-primary"></i></div>
+                        <span class="small text-white-50">info@navesdelsur.com</span>
                     </div>
-                    <span class="small text-white-50">info@navesdelsur.com</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-phone text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-phone text-primary"></i></div>
+                        <span class="small text-white-50">(011) 2124-2028</span>
                     </div>
-                    <span class="small text-white-50">(011) 2124-2028</span>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
+                    <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="footer-cert-img">
+                    <div class="d-flex align-items-center justify-content-center footer-iso-container">
+                        <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
-                <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="img-fluid footer-cert-img">
-                <div class="d-flex align-items-center justify-content-center footer-iso-container">
-                    <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+            <hr class="mb-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start m-0">© 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.</p>
                 </div>
-            </div>
-
-        </div>
-        
-        <hr class="mb-4 border-secondary">
-        <div class="row align-items-center">
-            <div class="col-md-7 col-lg-8">
-                <p class="text-center text-md-start m-0">
-                    © 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.
-                </p>
-            </div>
-            <div class="col-md-5 col-lg-4">
-                <div class="text-center text-md-end mt-3 mt-md-0">
-                    <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur,%20quisiera%20consultar%20por%20una%20bomba..." class="btn-whatsapp" target="_blank" title="Chatear con un vendedor">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur..." class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 120 });</script>
 </body>
 </html>

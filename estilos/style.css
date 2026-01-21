@@ -495,3 +495,90 @@ footer p {
 .footer-iso-container:hover {
     transform: scale(1.1);
 }
+
+/* --- ESTILOS SECCIÓN SERVICIOS (ZIGZAG) --- */
+
+.section-service {
+    padding: 40px 0;
+}
+
+.service-img {
+    width: 100%;
+    height: 350px; /* Altura fija para mantener uniformidad */
+    object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+    border-bottom: 5px solid var(--brand-light); /* Detalle estético en la base */
+    transition: all 0.4s ease;
+}
+
+.service-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* Espaciado para los iconos en listas */
+.section-service ul li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* Ajuste responsive para que en móviles no se vea pegado */
+@media (max-width: 991px) {
+    .section-service {
+        text-align: center;
+        margin-bottom: 60px !important;
+    }
+    .section-service ul {
+        display: inline-block;
+        text-align: left;
+    }
+    .service-img {
+        height: 250px;
+    }
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA SERVICIOS ZIGZAG --- */
+
+.service-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-section:last-child {
+    border-bottom: none;
+}
+
+.service-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover; /* Esto asegura que las fotos no se deformen si tienen distintos tamaños */
+    border-radius: 15px !important;
+    transition: transform 0.3s ease;
+}
+
+.service-section h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.service-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--brand-light);
+}
+
+/* En pantallas reverse, movemos la barrita decorativa a la derecha si centramos el texto */
+@media (max-width: 991px) {
+    .service-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .service-section h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
