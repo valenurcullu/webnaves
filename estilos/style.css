@@ -584,3 +584,27 @@ footer p {
         transform: translateX(-50%);
     }
 }
+
+/* Asegura que las cards de soluciones tengan una transición suave y sombra */
+.solution-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantiene los botones alineados abajo */
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: var(--brand-light);
+}
+
+.icon-box i {
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover .icon-box i {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--brand-light) !important;
+}
