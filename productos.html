@@ -6,12 +6,10 @@
     <title>Naves Del Sur - Productos</title> 
 
     <link href="./estilos/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="./estilos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -26,8 +24,8 @@
                 <li><a href="nosotros.html">Nosotros</a></li>
                 
                 <li class="dropdown-item">
-                    <a href="productos.html">
-                        Productos <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;" class="active-link"></i>
+                    <a href="productos.html" class="active-link">
+                        Productos <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;"></i>
                     </a>
                     <ul class="dropdown-menu-hover">
                         <li><a href="bombas-industriales.html">Industriales</a></li>
@@ -60,87 +58,108 @@
         </nav>
     </header>
 
-    <header class="page-header">
+    <header class="page-header page-header-clients">
         <div class="container">
-            <h1>Línea de Productos</h1>
-            <p class="lead">Soluciones de bombeo GECE PUMPS® para cada industria</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 data-aos="fade-down" data-aos-duration="1000">Línea de Productos</h1>
+                    <div class="section-divider bg-white mx-auto"></div>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        Soluciones de bombeo GECE PUMPS® para cada industria
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container mb-5">
-        <div class="row justify-content-center text-center mb-5">
+    <main class="container mb-5 py-4">
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
             <div class="col-lg-8">
-                <p class="text-muted">Fabricamos bombas a tornillo excéntrico robustas y confiables. Seleccione la categoría para ver las especificaciones técnicas completas.</p>
+                <h2 class="text-custom-blue fw-bold mb-3">Categorías Principales</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted fs-5">Fabricamos bombas a tornillo excéntrico robustas y confiables. Seleccione la categoría para ver las especificaciones técnicas completas.</p>
             </div>
         </div>
 
-        <div class="row g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4 g-lg-5">
             
-            <div class="col-md-6 col-lg-6 d-flex align-items-stretch"> <div class="card h-100 shadow-sm border-0 hover-card w-100">
-                    <div class="position-relative">
-                        <img src="./imagenes/bombasImg/j2.jpeg" class="card-img-top" alt="Bombas Industriales" style="height: 250px; object-fit: cover;">
-                        <div class="position-absolute top-0 end-0 bg-primary text-white px-3 py-1 rounded-start m-3">Más Vendido</div>
+            <div class="col" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 shadow-sm border-0 rounded-5 overflow-hidden product-category-card">
+                    <div class="product-img-wrapper">
+                        <img src="./imagenes/bombasImg/j2.jpeg" alt="Bombas Industriales">
+                        <div class="badge-floating text-white">
+                            <i class="fas fa-star me-1"></i> Más Vendido
+                        </div>
                     </div>
                     
-                    <div class="card-body p-4 text-center text-md-start d-flex flex-column">
-                        <div class="d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
-                            <i class="fa-solid fa-industry fs-3 text-primary me-3"></i>
-                            <h3 class="card-title h4 fw-bold text-dark mb-0">Bombas Industriales</h3>
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column">
+                        <div class="product-icon-circle">
+                            <i class="fa-solid fa-industry fs-2"></i>
                         </div>
-                        <p class="card-text text-secondary">Diseñadas para el transporte de fluidos viscosos, abrasivos o con sólidos en suspensión. Ideales para papeleras, tratamiento de aguas y minería.</p>
                         
-                        <a href="bombas-industriales.html" class="btn btn-outline-primary w-100 stretched-link mt-auto">Ver Modelos y Ficha</a>
+                        <h3 class="card-title h3 fw-bold text-dark mb-3">Bombas Industriales</h3>
+                        <p class="card-text text-muted mb-4 flex-grow-1">Diseñadas para el transporte de fluidos viscosos, abrasivos o con sólidos en suspensión. Ideales para papeleras, tratamiento de aguas y minería.</p>
+                        
+                        <a href="bombas-industriales.html" class="btn btn-primary rounded-pill py-3 fw-bold stretched-link">
+                            Ver Modelos y Ficha <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-6 d-flex align-items-stretch">
-                <div class="card h-100 shadow-sm border-0 hover-card w-100">
-                    <div class="position-relative">
-                        <img src="./imagenes/bombasImg/NEA5.jpeg" class="card-img-top" alt="Bombas Petroleras" style="height: 250px; object-fit: cover;">
+            <div class="col" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 shadow-sm border-0 rounded-5 overflow-hidden product-category-card">
+                    <div class="product-img-wrapper">
+                        <img src="./imagenes/bombasImg/NEA5.jpeg" alt="Bombas Petroleras">
                     </div>
-                    <div class="card-body p-4 text-center text-md-start d-flex flex-column">
-                        <div class="d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
-                            <i class="fa-solid fa-oil-well fs-3 text-primary me-3"></i>
-                            <h3 class="card-title h4 fw-bold text-dark mb-0">Bombas Petroleras</h3>
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column">
+                        <div class="product-icon-circle">
+                            <i class="fa-solid fa-oil-well fs-2"></i>
                         </div>
-                        <p class="card-text text-secondary">Sistemas BCP de superficie y de fondo para la extracción y transferencia de crudo. Alta eficiencia en condiciones extremas y pozos difíciles.</p>
+                        <h3 class="card-title h3 fw-bold text-dark mb-3">Bombas Petroleras</h3>
+                        <p class="card-text text-muted mb-4 flex-grow-1">Sistemas BCP de superficie y de fondo para la extracción y transferencia de crudo. Alta eficiencia en condiciones extremas y pozos difíciles.</p>
                         
-                        <a href="bombas-petroleras.html" class="btn btn-outline-primary w-100 stretched-link mt-auto">Ver Modelos y Ficha</a>
+                        <a href="bombas-petroleras.html" class="btn btn-primary rounded-pill py-3 fw-bold stretched-link">
+                            Ver Modelos y Ficha <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-6 d-flex align-items-stretch">
-                <div class="card h-100 shadow-sm border-0 hover-card w-100">
-                    <div class="position-relative">
-                        <img src="./imagenes/bombasImg/ffa1.jpeg" class="card-img-top" alt="Bombas Sanitarias" style="height: 250px; object-fit: cover;">
+            <div class="col" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 shadow-sm border-0 rounded-5 overflow-hidden product-category-card">
+                    <div class="product-img-wrapper">
+                        <img src="./imagenes/bombasImg/ffa1.jpeg" alt="Bombas Sanitarias">
                     </div>
-                    <div class="card-body p-4 text-center text-md-start d-flex flex-column">
-                        <div class="d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
-                            <i class="fa-solid fa-hand-holding-droplet fs-3 text-primary me-3"></i>
-                            <h3 class="card-title h4 fw-bold text-dark mb-0">Bombas Sanitarias</h3>
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column">
+                        <div class="product-icon-circle">
+                            <i class="fa-solid fa-hand-holding-droplet fs-2"></i>
                         </div>
-                        <p class="card-text text-secondary">Fabricadas en acero inoxidable con acabado sanitario. Limpieza CIP/SIP para industrias alimenticias, bebidas y farmacéuticas.</p>
+                        <h3 class="card-title h3 fw-bold text-dark mb-3">Bombas Sanitarias</h3>
+                        <p class="card-text text-muted mb-4 flex-grow-1">Fabricadas en acero inoxidable con acabado sanitario. Limpieza CIP/SIP para industrias alimenticias, bebidas y farmacéuticas.</p>
                         
-                        <a href="bombas-sanitarias.html" class="btn btn-outline-primary w-100 stretched-link mt-auto">Ver Modelos y Ficha</a>
+                        <a href="bombas-sanitarias.html" class="btn btn-primary rounded-pill py-3 fw-bold stretched-link">
+                            Ver Modelos y Ficha <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-6 d-flex align-items-stretch">
-                <div class="card h-100 shadow-sm border-0 hover-card w-100">
-                    <div class="position-relative">
-                        <img src="./imagenes/bombasImg/anp1.jpeg" class="card-img-top" alt="Bombas Dosificadoras" style="height: 250px; object-fit: cover;">
+            <div class="col" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 shadow-sm border-0 rounded-5 overflow-hidden product-category-card">
+                    <div class="product-img-wrapper">
+                        <img src="./imagenes/bombasImg/anp1.jpeg" alt="Bombas Dosificadoras">
                     </div>
-                    <div class="card-body p-4 text-center text-md-start d-flex flex-column">
-                        <div class="d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
-                            <i class="fa-solid fa-flask fs-3 text-primary me-3"></i>
-                            <h3 class="card-title h4 fw-bold text-dark mb-0"> Bombas Dosificadoras</h3>
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column">
+                        <div class="product-icon-circle">
+                            <i class="fa-solid fa-flask fs-2"></i>
                         </div>
-                        <p class="card-text text-secondary">Precisión milimétrica para la inyección de químicos y aditivos. Caudales bajos y control exacto para procesos críticos.</p>
+                        <h3 class="card-title h3 fw-bold text-dark mb-3">Bombas Dosificadoras</h3>
+                        <p class="card-text text-muted mb-4 flex-grow-1">Precisión milimétrica para la inyección de químicos y aditivos. Caudales bajos y control exacto para procesos críticos.</p>
                         
-                        <a href="bombas-dosificadoras.html" class="btn btn-outline-primary w-100 stretched-link mt-auto">Ver Modelos y Ficha</a>
+                        <a href="bombas-dosificadoras.html" class="btn btn-primary rounded-pill py-3 fw-bold stretched-link">
+                            Ver Modelos y Ficha <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -234,5 +253,13 @@
 </a>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, 
+        once: true,
+        offset: 100
+      });
+    </script>
 </body>
 </html>
