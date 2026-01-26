@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naves Del Sur</title> 
+    <title>Naves Del Sur | Contacto</title> 
 
     <link href="./estilos/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="./estilos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
     
-      <header class="custom-header">
+    <header class="custom-header">
         <nav class="custom-navbar">
             <a href="index.html" class="custom-logo">
                 <img src="./imagenes/naves3.png" alt="Logo" class="logo-img">
@@ -41,7 +39,7 @@
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="clientes.html">Clientes</a></li>
                 
-                <li><a href="contacto.html" class="btn-nav-contacto" class="active-link">Contacto</a></li>
+                <li><a href="contacto.html" class="btn-nav-contacto active-link">Contacto</a></li>
 
                 <li class="dropdown-item">
                     <a href="#" class="d-flex align-items-center">
@@ -60,86 +58,147 @@
         </nav>
     </header>
 
-    <header class="page-header">
+    <header class="page-header page-header-clients">
         <div class="container">
-            <h1>Contacto</h1>
-            <p class="lead">Estamos a su disposición para resolver sus dudas y requerimientos.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 data-aos="fade-down" data-aos-duration="1000">Hablemos de su Proyecto</h1>
+                    <div class="section-divider bg-white mx-auto"></div>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        Asesoramiento técnico especializado y atención comercial directa.
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container mb-5">
+    <main class="container mb-5" style="margin-top: -50px; position: relative; z-index: 2;">
+        
         <div class="row g-5">
-            
-            <div class="col-md-7">
-                <h3 class="mb-4 fw-bold" style="color: var(--brand-blue);">Envíenos un mensaje</h3>
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" required>
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-5 shadow-lg p-4 p-md-5 h-100 border border-light">
+                    <h3 class="mb-2 fw-bold text-custom-blue">Envíenos un mensaje</h3>
+                    <p class="text-muted mb-4">Complete el formulario y un asesor técnico se pondrá en contacto a la brevedad.</p>
+                    
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-light border-0" id="nombre" placeholder="Nombre" required>
+                                    <label for="nombre">Nombre y Apellido</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-light border-0" id="empresa" placeholder="Empresa">
+                                    <label for="empresa">Empresa / Razón Social</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-light border-0" id="email" placeholder="name@example.com" required>
+                                    <label for="email">Correo Electrónico</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control bg-light border-0" id="telefono" placeholder="Teléfono">
+                                    <label for="telefono">Teléfono / WhatsApp</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control bg-light border-0" placeholder="Deje su mensaje aquí" id="mensaje" style="height: 150px" required></textarea>
+                                    <label for="mensaje">Consulta o Detalle del Pedido</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary rounded-pill w-100 py-3 fw-bold shadow-sm hover-scale">
+                                    <i class="fas fa-paper-plane me-2"></i> Enviar Consulta
+                                </button>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="empresa" class="form-label">Empresa</label>
-                            <input type="text" class="form-control" id="empresa">
-                        </div>
-                        <div class="col-12">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="col-12">
-                            <label for="mensaje" class="form-label">Consulta</label>
-                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary px-4 py-2">Enviar Mensaje</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
 
-            <div class="col-md-5">
-                <div class="p-4 bg-light rounded shadow-sm h-100">
-                    <h3 class="h4 mb-4 fw-bold" style="color: var(--brand-blue);">Información de Contacto</h3>
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                <div class="h-100 d-flex flex-column justify-content-center ps-lg-4 mt-4 mt-lg-0">
                     
-                    <div class="d-flex mb-4">
-                        <i class="bi bi-geo-alt-fill fs-4 text-primary me-3"></i>
-                        <div>
-                            <h5 class="fw-bold mb-1">Planta Industrial</h5>
-                            <p class="mb-0 text-muted">Francisco Cafferata 3294<br>Parque Industrial Alte. Brown<br>Burzaco (1852), Buenos Aires</p>
+                    <div class="mb-5">
+                        <h4 class="fw-bold text-custom-blue mb-4">Información de Contacto</h4>
+                        
+                        <div class="d-flex mb-4 align-items-start">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="fas fa-map-marker-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Planta Industrial</h6>
+                                <p class="text-muted mb-0 lh-sm">
+                                    Francisco Cafferata 3294<br>
+                                    Parque Industrial Alte. Brown<br>
+                                    Burzaco (1852), Buenos Aires
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4 align-items-start">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="fas fa-phone-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Ventas y Asesoramiento</h6>
+                                <p class="text-muted mb-0">
+                                    <a href="tel:+541121242028" class="text-decoration-none text-muted hover-link">(011) 2124-2028</a><br>
+                                    <a href="tel:+541121458283" class="text-decoration-none text-muted hover-link">(011) 2145-8283</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="fas fa-envelope fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Correo Electrónico</h6>
+                                <p class="text-muted mb-0">
+                                    <a href="mailto:ventas@navesdelsur.com" class="text-decoration-none text-muted hover-link">ventas@navesdelsur.com</a><br>
+                                    <a href="mailto:info@navesdelsur.com" class="text-decoration-none text-muted hover-link">info@navesdelsur.com</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="d-flex mb-4">
-                        <i class="bi bi-telephone-fill fs-4 text-primary me-3"></i>
-                        <div>
-                            <h5 class="fw-bold mb-1">Teléfonos</h5>
-                            <p class="mb-0 text-muted">(011) 2124-2028<br>(011) 2145-8283</p>
-                        </div>
+                    <div class="bg-custom-blue text-white p-4 rounded-4 shadow-sm position-relative overflow-hidden">
+                        <div style="position: absolute; right: -20px; top: -20px; font-size: 5rem; opacity: 0.1;"><i class="fas fa-clock"></i></div>
+                        <h5 class="fw-bold mb-3">Horario de Atención</h5>
+                        <ul class="list-unstyled mb-0 opacity-75">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Lunes - Viernes:</span>
+                                <span class="fw-bold">08:00 - 16:00 hs</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>Sábados y Domingos:</span>
+                                <span class="fw-bold">Cerrado</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="d-flex">
-                        <i class="bi bi-envelope-fill fs-4 text-primary me-3"></i>
-                        <div>
-                            <h5 class="fw-bold mb-1">Email</h5>
-                            <p class="mb-0 text-muted">ventas@navesdelsur.com</p>
-                            <p class="mb-0 text-muted">info@navesdelsur.com</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5 pt-4" data-aos="zoom-in">
             <div class="col-12">
-                <h3 class="mb-3 fw-bold" style="color: var(--brand-blue);">Nuestra Ubicación</h3>
-                <div class="ratio ratio-21x9 shadow rounded overflow-hidden" style="border: 1px solid #ddd;">
+                <div class="ratio ratio-21x9 shadow-lg rounded-5 overflow-hidden border border-white">
                     <iframe 
-                        src="https://maps.google.com/maps?q=Francisco+Cafferata+3294,+Burzaco,+Buenos+Aires&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.626477468164!2d-58.38541248476534!3d-34.80689998040685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd30672e3661b%3A0x6339d37536336e35!2sNaves%20Del%20Sur%20S.A.!5e0!3m2!1ses-419!2sar!4v1675200000000!5m2!1ses-419!2sar" 
                         width="100%" 
                         height="450" 
                         style="border:0;" 
                         allowfullscreen="" 
-                        loading="lazy">
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
@@ -147,92 +206,76 @@
 
     </main>
 
-   <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
-    <div class="container text-center text-md-start">
-        <div class="row">
-            
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                <a href="index.html" class="text-decoration-none w-100">
-                    <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
-                </a>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
-                    <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
-                    <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
-                    <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Dosificadoras</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
-                
-                <div class="d-flex align-items-start mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-home text-primary"></i>
+    <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <a href="index.html" class="text-decoration-none w-100">
+                        <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
+                    </a>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
+                        <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
+                        <li class="mb-2"><a href="repuestos.html" class="text-white text-decoration-none footer-link">Repuestos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
+                    <div class="d-flex align-items-start mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-home text-primary"></i></div>
+                        <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
                     </div>
-                    <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-envelope text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-envelope text-primary"></i></div>
+                        <span class="small text-white-50">info@navesdelsur.com</span>
                     </div>
-                    <span class="small text-white-50">info@navesdelsur.com</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-phone text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-phone text-primary"></i></div>
+                        <span class="small text-white-50">(011) 2124-2028</span>
                     </div>
-                    <span class="small text-white-50">(011) 2124-2028</span>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
+                    <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="footer-cert-img">
+                    <div class="d-flex align-items-center justify-content-center footer-iso-container">
+                        <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
-                <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="img-fluid footer-cert-img">
-                <div class="d-flex align-items-center justify-content-center footer-iso-container">
-                    <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+            <hr class="mb-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start m-0">© 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.</p>
                 </div>
-            </div>
-
-        </div>
-        
-        <hr class="mb-4 border-secondary">
-        <div class="row align-items-center">
-            <div class="col-md-7 col-lg-8">
-                <p class="text-center text-md-start m-0">
-                    © 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.
-                </p>
-            </div>
-            <div class="col-md-5 col-lg-4">
-                <div class="text-center text-md-end mt-3 mt-md-0">
-                    <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-
-    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur,%20quisiera%20consultar%20por%20una%20bomba..." class="btn-whatsapp" target="_blank" title="Chatear con un vendedor">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur..." class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 120 });</script>
 </body>
 </html>
