@@ -6,16 +6,15 @@
     <title>Bombas Dosificadoras | Naves Del Sur</title> 
 
     <link href="./estilos/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="./estilos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-     <header class="custom-header">
+    <header class="custom-header">
         <nav class="custom-navbar">
             <a href="index.html" class="custom-logo">
                 <img src="./imagenes/naves3.png" alt="Logo" class="logo-img">
@@ -32,9 +31,11 @@
                         <li><a href="bombas-industriales.html">Industriales</a></li>
                         <li><a href="bombas-petroleras.html">Petroleras</a></li>
                         <li><a href="bombas-sanitarias.html">Sanitarias</a></li>
-                        <li><a href="bombas-dosificadoras.html">Dosificadoras</a></li>
+                        <li><a href="bombas-dosificadoras.html" class="fw-bold">Dosificadoras</a></li>
+                        <li><a href="repuestos.html">Repuestos</a></li>
                     </ul>
                 </li>
+                <li><a href="repuestos.html">Repuestos</a></li> 
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="clientes.html">Clientes</a></li>
                 
@@ -45,11 +46,11 @@
                         <i class="fas fa-globe me-2" style="color: #38bdf8; font-size: 1.1rem;"></i> 
                         ES <i class="fas fa-chevron-down ms-1" style="font-size: 0.7em;"></i>
                     </a>
-                    <ul class="dropdown-menu-hover" style="min-width: 130px; left: -50px;"> <li><a href="#" class="fw-bold">Español</a></li>
+                    <ul class="dropdown-menu-hover" style="min-width: 130px; left: -50px;"> 
+                        <li><a href="#" class="fw-bold">Español</a></li>
                         <li><a href="#" style="opacity: 0.7;">English</a></li>
                     </ul>
                 </li>
-                
             </ul>
             <button class="custom-menu-btn" id="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -57,178 +58,200 @@
         </nav>
     </header>
 
-    <header class="page-header text-start">
+    <header class="page-header text-start page-header-clients">
         <div class="container">
-            <a href="productos.html" class="back-link mb-2">
-                <i class="fas fa-arrow-left"></i> Volver a Productos
+            <a href="productos.html" class="back-link mb-3">
+                <i class="fas fa-arrow-left"></i> Volver a Categorías
             </a>
-            <h1>Bombas Dosificadoras</h1>
-            <p class="lead">Precisión milimétrica para la inyección de químicos, aditivos y fluidos críticos en procesos industriales.</p>
+            <h1 data-aos="fade-down" data-aos-duration="1000">Bombas Dosificadoras</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">Precisión milimétrica para la inyección de químicos y aditivos</p>
         </div>
     </header>
 
-    <main class="container mb-5">
+    <main class="container mb-5 overflow-hidden">
         
-        <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-                <p class="text-muted">Nuestras bombas dosificadoras garantizan un control exacto del caudal, ideales para tratamiento de aguas, industria química y alimenticia. Disponemos de las series ADP y ANP para cubrir distintos rangos de presión.</p>
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+            <div class="col-lg-9">
+                <h2 class="text-custom-blue fw-bold mb-3">Control Exacto de Caudal</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-muted fs-5">
+                    Nuestras bombas dosificadoras están diseñadas para procesos críticos donde la exactitud es fundamental. Ideales para tratamiento de aguas, industria química y alimenticia.
+                </p>
             </div>
         </div>
 
-        <div class="row g-5">
-            
-            <div class="col-md-6">
-                <div class="card h-100 shadow border-0 hover-card">
-                    <a href="./bombas/detalle-linea-adp.html" style="text-decoration: none;">
-                    <img src="./imagenes/bombasImg/adp1.jpeg" class="card-img-top" alt="Bomba Dosificadora ADP">
-                    
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h2 class="card-title fw-bold text-primary">Línea ADP</h2>
-                            <span class="badge bg-info text-dark">Diafragma / Precisión</span>
+        <div class="card border-0 shadow-lg rounded-5 overflow-hidden mb-5" data-aos="fade-right">
+            <div class="row g-0">
+                <div class="col-lg-6 position-relative bg-light">
+                    <div class="h-100 d-flex align-items-center justify-content-center p-5">
+                        <img src="./imagenes/bombasImg/adp1.jpeg" class="img-fluid rounded-4 shadow-sm upcoming-img" alt="Bomba Dosificadora ADP">
+                    </div>
+                    <div class="position-absolute top-0 start-0 m-4">
+                        <span class="badge bg-info text-dark fs-6 px-3 py-2 rounded-pill">Línea ADP</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4 p-lg-5 h-100 d-flex flex-column justify-content-center">
+                        <h3 class="fw-bold text-custom-blue mb-2">Serie a Diafragma (ADP)</h3>
+                        <p class="text-muted mb-4">Seguridad total para fluidos agresivos.</p>
+                        
+                        <p class="mb-4 text-secondary">
+                            La solución ideal para productos corrosivos, tóxicos o estériles. Al no tener sellos dinámicos en contacto con el fluido, garantiza una <strong>estanqueidad total</strong> sin riesgo de fugas.
+                        </p>
+
+                        <div class="d-flex gap-4 mb-4 text-center">
+                            <div>
+                                <div class="text-info mb-1"><i class="fas fa-shield-alt fs-3"></i></div>
+                                <small class="d-block fw-bold text-dark">Hermética</small>
+                            </div>
+                            <div>
+                                <div class="text-info mb-1"><i class="fas fa-sliders-h fs-3"></i></div>
+                                <small class="d-block fw-bold text-dark">Regulable</small>
+                            </div>
+                            <div>
+                                <div class="text-info mb-1"><i class="fas fa-flask fs-3"></i></div>
+                                <small class="d-block fw-bold text-dark">Químicos</small>
+                            </div>
                         </div>
-                        
-                        <p class="card-text text-secondary">La serie ADP ofrece dosificación por diafragma de alta fiabilidad. Es la solución ideal para productos corrosivos o tóxicos gracias a su estanqueidad total y materiales químicamente resistentes.</p>
-                        
-                        <h5 class="mt-4 mb-3 fs-6 fw-bold text-uppercase text-dark">Características:</h5>
-                        <ul class="list-unstyled text-secondary">
-                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Regulación micrométrica de caudal</li>
-                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Cabezales en PVC, PVDF o Inox</li>
-                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Bajo mantenimiento</li>
-                        </ul>
-                    </a>
-                        <div class="d-grid gap-2 mt-4">
-                            <a href="./bombas/detalle-linea-adp.html" class="btn btn-primary">
-                                <i class="fa-solid fa-circle-info me-2"></i>Ver más información
+
+                        <div class="d-grid gap-2 d-md-flex mt-auto">
+                            <a href="./bombas/detalle-linea-adp.html" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
+                                Ver Especificaciones <i class="fas fa-arrow-right ms-2"></i>
                             </a>
-                            <a href="archivos/ficha-linea-adp.pdf" class="btn btn-outline-secondary" download>
-                                <i class="fa-solid fa-file-pdf me-2"></i>Descargar Ficha Técnica
+                            <a href="archivos/ficha-linea-adp.pdf" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" download>
+                                <i class="fas fa-file-pdf me-2"></i> Ficha
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6">
-                <div class="card h-100 shadow border-0 hover-card">
-                    <a href="./bombas/detalle-linea-anp.html" style="text-decoration: none;">
-                    <img src="./imagenes/bombasImg/anp1.jpeg" class="card-img-top" alt="Bomba Dosificadora ANP">
-                    
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h2 class="card-title fw-bold text-primary">Línea ANP</h2>
-                            <span class="badge bg-dark">Pistón / Alta Presión</span>
+        <div class="card border-0 shadow-lg rounded-5 overflow-hidden mb-5" data-aos="fade-left">
+            <div class="row g-0 flex-lg-row-reverse">
+                <div class="col-lg-6 position-relative bg-light">
+                    <div class="h-100 d-flex align-items-center justify-content-center p-5">
+                        <img src="./imagenes/bombasImg/anp1.jpeg" class="img-fluid rounded-4 shadow-sm upcoming-img" alt="Bomba Dosificadora ANP">
+                    </div>
+                    <div class="position-absolute top-0 end-0 m-4">
+                        <span class="badge bg-dark fs-6 px-3 py-2 rounded-pill">Línea ANP</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4 p-lg-5 h-100 d-flex flex-column justify-content-center">
+                        <h3 class="fw-bold text-custom-blue mb-2">Serie a Pistón (ANP)</h3>
+                        <p class="text-muted mb-4">Potencia para altas presiones.</p>
+                        
+                        <p class="mb-4 text-secondary">
+                            Diseñada para aplicaciones que requieren presiones de inyección elevadas (hasta 100 bar). Su construcción robusta con pistón rectificado permite el trabajo continuo en las condiciones más severas.
+                        </p>
+
+                        <div class="d-flex gap-4 mb-4 text-center">
+                            <div>
+                                <div class="text-dark mb-1"><i class="fas fa-tachometer-alt fs-3"></i></div>
+                                <small class="d-block fw-bold text-dark">Alta Presión</small>
+                            </div>
+                            <div>
+                                <div class="text-dark mb-1"><i class="fas fa-bullseye fs-3"></i></div>
+                                <small class="d-block fw-bold text-dark">Precisión</small>
+                            </div>
+                            <div>
+                                <div class="text-dark mb-1"><i class="fas fa-cogs fs-3"></i></div>
+                                <small class="d-block fw-bold text-dark">Robusta</small>
+                            </div>
                         </div>
-                        
-                        <p class="card-text text-secondary">La serie ANP a pistón está diseñada para aplicaciones que requieren presiones de inyección elevadas. Su construcción robusta permite el trabajo continuo en condiciones severas.</p>
-                        
-                        <h5 class="mt-4 mb-3 fs-6 fw-bold text-uppercase text-dark">Características:</h5>
-                        <ul class="list-unstyled text-secondary">
-                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Presiones de hasta 100 bar</li>
-                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Alta precisión y repetibilidad</li>
-                            <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Motor eléctrico normalizado</li>
-                        </ul>
-                    </a>
-                        <div class="d-grid gap-2 mt-4">
-                            <a href="./bombas/detalle-linea-anp.html" class="btn btn-primary">
-                                <i class="fa-solid fa-circle-info me-2"></i>Ver más información
+
+                        <div class="d-grid gap-2 d-md-flex mt-auto">
+                            <a href="./bombas/detalle-linea-anp.html" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">
+                                Ver Especificaciones <i class="fas fa-arrow-right ms-2"></i>
                             </a>
-                            <a href="archivos/ficha-linea-anp.pdf" class="btn btn-outline-secondary" download>
-                                <i class="fa-solid fa-file-pdf me-2"></i>Descargar Ficha Técnica
+                            <a href="archivos/ficha-linea-anp.pdf" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" download>
+                                <i class="fas fa-file-pdf me-2"></i> Ficha
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <div class="bg-custom-blue text-white rounded-4 p-4 text-center shadow-sm" data-aos="zoom-in">
+            <h4 class="fw-bold mb-3">¿Necesita inyectar aditivos complejos?</h4>
+            <p class="mb-3 opacity-75">Nuestros ingenieros calculan la dosificación exacta para optimizar su consumo de reactivos.</p>
+            <a href="contacto.html" class="btn btn-light rounded-pill px-4 fw-bold">Consultar con Ingeniería</a>
+        </div>
+
     </main>
 
     <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
-    <div class="container text-center text-md-start">
-        <div class="row">
-            
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                <a href="index.html" class="text-decoration-none w-100">
-                    <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
-                </a>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
-                    <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
-                    <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
-                    <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Dosificadoras</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
-                
-                <div class="d-flex align-items-start mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-home text-primary"></i>
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <a href="index.html" class="text-decoration-none w-100">
+                        <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
+                    </a>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
+                        <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
+                        <li class="mb-2"><a href="repuestos.html" class="text-white text-decoration-none footer-link">Repuestos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
+                    <div class="d-flex align-items-start mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-home text-primary"></i></div>
+                        <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
                     </div>
-                    <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-envelope text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-envelope text-primary"></i></div>
+                        <span class="small text-white-50">info@navesdelsur.com</span>
                     </div>
-                    <span class="small text-white-50">info@navesdelsur.com</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-phone text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-phone text-primary"></i></div>
+                        <span class="small text-white-50">(011) 2124-2028</span>
                     </div>
-                    <span class="small text-white-50">(011) 2124-2028</span>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
+                    <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="footer-cert-img">
+                    <div class="d-flex align-items-center justify-content-center footer-iso-container">
+                        <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
-                <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="img-fluid footer-cert-img">
-                <div class="d-flex align-items-center justify-content-center footer-iso-container">
-                    <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+            <hr class="mb-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start m-0">© 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.</p>
                 </div>
-            </div>
-
-        </div>
-        
-        <hr class="mb-4 border-secondary">
-        <div class="row align-items-center">
-            <div class="col-md-7 col-lg-8">
-                <p class="text-center text-md-start m-0">
-                    © 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.
-                </p>
-            </div>
-            <div class="col-md-5 col-lg-4">
-                <div class="text-center text-md-end mt-3 mt-md-0">
-                    <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur,%20quisiera%20consultar%20por%20una%20bomba..." class="btn-whatsapp" target="_blank" title="Chatear con un vendedor">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur..." class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 120 });</script>
 </body>
 </html>
