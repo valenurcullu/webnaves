@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes | Naves Del Sur</title> 
+    <title>Naves Del Sur | Nuestros Clientes</title> 
 
     <link href="./estilos/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./estilos/style.css">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="./estilos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-      <header class="custom-header">
+    <header class="custom-header">
         <nav class="custom-navbar">
             <a href="index.html" class="custom-logo">
                 <img src="./imagenes/naves3.png" alt="Logo" class="logo-img">
@@ -58,141 +58,263 @@
         </nav>
     </header>
 
-    <header class="page-header">
+    <header class="page-header page-header-clients">
         <div class="container">
-            <h1>Nuestros Clientes</h1>
-            <p class="lead">Empresas líderes confían en la tecnología GECE PUMPS®</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 data-aos="fade-down" data-aos-duration="1000">Nuestros Aliados</h1>
+                    <div class="section-divider bg-white mx-auto"></div>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                        Más de 30 años construyendo relaciones sólidas con las empresas más exigentes de la región.
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container-fluid mb-5 p-0">
+    <main>
         
-        <div class="container text-center my-5">
-            <p class="lead text-muted">Estamos orgullosos de trabajar con las compañías más importantes de la región.</p>
-        </div>
-
-        <div class="slider-container">
-            <div class="slide-track">
-                
-                <div class="slide"><img src="./imagenes/logos/ypf.png" alt="YPF"></div>
-                <div class="slide"><img src="./imagenes/logos/pampa.jpg" alt="Pampa"></div>
-                <div class="slide"><img src="./imagenes/logos/shell1.png" alt="Shell"></div>
-                <div class="slide"><img src="./imagenes/logos/petrobras.gif" alt="Petrobras"></div>
-                <div class="slide"><img src="./imagenes/logos/molinos.png" alt="Molinos"></div>
-                <div class="slide"><img src="./imagenes/logos/coca.gif" alt="Coca Cola"></div>
-                <div class="slide"><img src="./imagenes/logos/ledesma.png" alt="Ledesma"></div>
-                <div class="slide"><img src="./imagenes/logos/capex.png" alt="Capex"></div>
-                <div class="slide"><img src="./imagenes/logos/oldelval.png" alt="Oldelval"></div>
-                
-                <div class="slide"><img src="./imagenes/logos/ypf.png" alt="YPF"></div>
-                <div class="slide"><img src="./imagenes/logos/pampa.jpg" alt="Pampa"></div>
-                <div class="slide"><img src="./imagenes/logos/shell1.png" alt="Shell"></div>
-                <div class="slide"><img src="./imagenes/logos/petrobras.gif" alt="Petrobras"></div>
-                <div class="slide"><img src="./imagenes/logos/molinos.png" alt="Molinos"></div>
-                <div class="slide"><img src="./imagenes/logos/coca.gif" alt="Coca Cola"></div>
-                <div class="slide"><img src="./imagenes/logos/ledesma.png" alt="Ledesma"></div>
-                <div class="slide"><img src="./imagenes/logos/capex.png" alt="Capex"></div>
-                <div class="slide"><img src="./imagenes/logos/oldelval.png" alt="Oldelval"></div>
-
+        <section class="container mb-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h2 class="text-custom-blue fw-bold mb-4">Confianza que Impulsa la Industria</h2>
+                    <p class="text-muted fs-5">
+                        Nuestra tecnología está presente en los procesos críticos de las industrias Petrolera, Alimenticia, Química y Minera. 
+                        Agradecemos a quienes confían en <strong>Naves Del Sur</strong> para mantener su producción en movimiento.
+                    </p>
+                </div>
             </div>
-        </div>
-        
-        <div class="container mt-5">
-            <div class="bg-light p-5 rounded text-center shadow-sm border">
-                <h3 class="fw-bold text-custom-blue">Las grandes industrias, no eligen al azar.</h3>
-                <p class="text-muted mb-4">Si buscás un aliado técnico que responda con calidad
-y compromiso, estás en el lugar correcto</p>
-                <a href="contacto.html" class="btn btn-primary btn-lg px-5">Contactar Ahora</a>
+        </section>
+
+        <section class="bg-white py-5 mb-5 shadow-sm border-top border-bottom">
+            <div class="container mb-4">
+                <h5 class="text-center text-uppercase text-custom-light fw-bold ls-2">Empresas que confían en nosotros</h5>
             </div>
-        </div>
+            
+            <div class="slider-container">
+                <div class="slide-track">
+                    
+                    <div class="slide-logo"><img src="./imagenes/logos/ypf.png" alt="YPF" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/pampa.jpg" alt="Arcor" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/shell1.png" alt="Quilmes" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/coca.gif" alt="Coca Cola" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/oldelval.png" alt="Pan American Energy" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/vidal.png" alt="Unilever" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/molinos.png" alt="Techint" class="client-logo"></div>
+                    
+                    <div class="slide-logo"><img src="./imagenes/logos/ypf.png" alt="YPF" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/pampa.jpg" alt="Arcor" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/shell1.png" alt="Quilmes" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/coca.gif" alt="Coca Cola" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/oldelval.png" alt="Pan American Energy" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/vidal.png" alt="Unilever" class="client-logo"></div>
+                    <div class="slide-logo"><img src="./imagenes/logos/molinos.png" alt="Techint" class="client-logo"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5 py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold text-custom-blue">Sectores Abastecidos</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="row text-center g-4">
+                <div class="col-md-6 col-lg-3 industry-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="industry-icon-box shadow-sm">
+                        <i class="fas fa-oil-well fa-2x"></i>
+                    </div>
+                    <h5 class="fw-bold">Oil & Gas</h5>
+                    <p class="small text-muted">Bombas de alta presión y certificaciones API.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 industry-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="industry-icon-box shadow-sm">
+                        <i class="fas fa-utensils fa-2x"></i>
+                    </div>
+                    <h5 class="fw-bold">Alimenticia</h5>
+                    <p class="small text-muted">Equipos sanitarios de acero inoxidable.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 industry-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="industry-icon-box shadow-sm">
+                        <i class="fas fa-flask fa-2x"></i>
+                    </div>
+                    <h5 class="fw-bold">Química</h5>
+                    <p class="small text-muted">Materiales resistentes a la corrosión.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 industry-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="industry-icon-box shadow-sm">
+                        <i class="fas fa-gem fa-2x"></i>
+                    </div>
+                    <h5 class="fw-bold">Minería</h5>
+                    <p class="small text-muted">Soluciones robustas para lodos y abrasivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5 mb-5 position-relative overflow-hidden">
+            <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(0, 168, 232, 0.1); border-radius: 50%;"></div>
+            
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="fw-bold text-custom-blue">Lo que dicen nuestros clientes</h2>
+                        <p class="text-muted">La satisfacción de quienes operan nuestros equipos es nuestra mejor garantía.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card shadow-sm">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px;">
+                                    JC
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Juan Carlos M.</h6>
+                                    <small class="text-muted">Jefe de Planta - Ind. Alimenticia</small>
+                                </div>
+                            </div>
+                            <p class="text-muted fst-italic mb-0">
+                                "La respuesta del servicio técnico de Naves Del Sur es impecable. En 24hs tuvimos el repuesto en planta y la línea operativa nuevamente."
+                            </p>
+                            <div class="mt-3 text-warning small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card shadow-sm">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px;">
+                                    RP
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Roberto P.</h6>
+                                    <small class="text-muted">Gerente Mantenimiento - Petrolera</small>
+                                </div>
+                            </div>
+                            <p class="text-muted fst-italic mb-0">
+                                "La durabilidad de los estatores superó nuestras expectativas. Llevamos 2 años operando sin paradas no programadas."
+                            </p>
+                            <div class="mt-3 text-warning small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-card shadow-sm">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px;">
+                                    AD
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Ing. Ana D.</h6>
+                                    <small class="text-muted">Proyectos - Química</small>
+                                </div>
+                            </div>
+                            <p class="text-muted fst-italic mb-0">
+                                "Excelente asesoramiento técnico para la selección de equipos. Entendieron perfectamente la complejidad de nuestro fluido."
+                            </p>
+                            <div class="mt-3 text-warning small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5">
+            <div class="bg-custom-blue text-white rounded-4 p-5 text-center position-relative overflow-hidden shadow-lg" data-aos="zoom-in">
+                <div style="position: absolute; top: -50%; left: -10%; width: 300px; height: 300px; border: 2px solid rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -50%; right: -10%; width: 300px; height: 300px; background: rgba(56, 189, 248, 0.1); border-radius: 50%;"></div>
+
+                <div class="position-relative z-1">
+                    <h2 class="fw-bold mb-3">¿Listo para optimizar su producción?</h2>
+                    <p class="lead mb-4 text-white-50">Súmese a la red de empresas líderes que eligen calidad y respaldo.</p>
+                    <a href="contacto.html" class="btn btn-light rounded-pill px-5 py-3 fw-bold text-custom-blue shadow hover-scale">
+                        Solicitar Asesoramiento <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
-    <div class="container text-center text-md-start">
-        <div class="row">
-            
-            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                <a href="index.html" class="text-decoration-none w-100">
-                    <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
-                </a>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
-                    <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
-                    <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
-                    <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
-                    <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Dosificadoras</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
-                
-                <div class="d-flex align-items-start mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-home text-primary"></i>
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <a href="index.html" class="text-decoration-none w-100">
+                        <img src="./imagenes/naves2.png" alt="Naves del Sur" class="footer-logo-mega">
+                    </a>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Menú</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none footer-link">Inicio</a></li>
+                        <li class="mb-2"><a href="nosotros.html" class="text-white text-decoration-none footer-link">Nosotros</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white text-decoration-none footer-link">Servicios</a></li>
+                        <li class="mb-2"><a href="clientes.html" class="text-white text-decoration-none footer-link">Clientes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Industriales</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Petroleras</a></li>
+                        <li class="mb-2"><a href="productos.html" class="text-white text-decoration-none footer-link">Sanitarias</a></li>
+                        <li class="mb-2"><a href="repuestos.html" class="text-white text-decoration-none footer-link">Repuestos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
+                    <div class="d-flex align-items-start mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-home text-primary"></i></div>
+                        <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
                     </div>
-                    <span class="small text-white-50">Francisco Cafferata 3294, Burzaco</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-envelope text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-envelope text-primary"></i></div>
+                        <span class="small text-white-50">info@navesdelsur.com</span>
                     </div>
-                    <span class="small text-white-50">info@navesdelsur.com</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <div style="width: 25px; flex-shrink: 0;">
-                        <i class="fas fa-phone text-primary"></i>
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 25px; flex-shrink: 0;"><i class="fas fa-phone text-primary"></i></div>
+                        <span class="small text-white-50">(011) 2124-2028</span>
                     </div>
-                    <span class="small text-white-50">(011) 2124-2028</span>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
+                    <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="footer-cert-img">
+                    <div class="d-flex align-items-center justify-content-center footer-iso-container">
+                        <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column align-items-center align-items-md-end gap-3">
-                <img src="./imagenes/madeInArgentina.png" alt="Hecho en Argentina" class="img-fluid footer-cert-img">
-                <div class="d-flex align-items-center justify-content-center footer-iso-container">
-                    <img src="./imagenes/iso4.png" alt="ISO 9001" class="img-fluid">
+            <hr class="mb-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start m-0">© 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.</p>
                 </div>
-            </div>
-
-        </div>
-        
-        <hr class="mb-4 border-secondary">
-        <div class="row align-items-center">
-            <div class="col-md-7 col-lg-8">
-                <p class="text-center text-md-start m-0">
-                    © 2026 <strong>Naves Del Sur S.A.</strong> Todos los derechos reservados.
-                </p>
-            </div>
-            <div class="col-md-5 col-lg-4">
-                <div class="text-center text-md-end mt-3 mt-md-0">
-                    <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end mt-3 mt-md-0">
+                        <a href="https://www.linkedin.com/company/naves-del-sur-s-a/" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/navesdelsur/?hl=es-la" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-    
-    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur,%20quisiera%20consultar%20por%20una%20bomba..." class="btn-whatsapp" target="_blank" title="Chatear con un vendedor">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    </footer>
+
+    <a href="https://wa.me/5491167496200?text=Hola%20Naves%20Del%20Sur..." class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 120 });</script>
 </body>
 </html>

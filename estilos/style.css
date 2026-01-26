@@ -1,17 +1,17 @@
-/* --- style.css --- */
+/* =========================================
+   1. VARIABLES Y CONFIGURACIÓN BASE
+   ========================================= */
 :root {
-    /* Variables Naves Del Sur */
+    /* Variables de Marca */
     --brand-blue: #004481;
     --brand-light: #00a8e8;
     --brand-dark: #002a50;
     
-    /* Variables Navbar Tech */
+    /* Variables Navbar */
     --nav-bg: #0f172a;      
     --nav-text: #f8fafc;    
     --nav-accent: #38bdf8;  
     --nav-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); 
-    
-    /* Variables de Geometría */
     --nav-radius: 50px;     
 }
 
@@ -21,32 +21,42 @@ body {
     padding-top: 0;
 }
 
-/* --- CLASES PERSONALIZADAS BOOTSTRAP --- */
+/* Scroll suave para anclas */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   2. BOOTSTRAP OVERRIDES & BOTONES
+   ========================================= */
 .bg-custom-blue { background-color: var(--brand-blue) !important; }
 .text-custom-blue { color: var(--brand-blue) !important; }
 .text-custom-light { color: var(--brand-light) !important; }
 
-/* Botones Generales */
+/* Botones Primarios */
 .btn-primary {
     background-color: var(--brand-blue);
     border-color: var(--brand-blue);
     padding: 10px 25px;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
     background-color: var(--brand-dark);
     border-color: var(--brand-dark);
 }
 
-/* --- NAV BAR FLOTANTE (ESTILO CÁPSULA - AGRANDADO) --- */
+/* =========================================
+   3. NAVBAR (CÁPSULA FLOTANTE)
+   ========================================= */
 header.custom-header {
     background-color: transparent; 
-    /* ABSOLUTE: Se queda quieta arriba y NO persigue al bajar */
     position: absolute; 
-    top: 25px; /* Bajamos un poco más la barra */
+    top: 25px; 
     width: 100%;
     z-index: 1030;
-    pointer-events: none; /* Permite clicks a los lados de la cápsula */
+    pointer-events: none; 
 }
 
 .custom-navbar {
@@ -55,44 +65,35 @@ header.custom-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Padding ajustado para compensar el logo más grande */
     padding: 0.5rem 2.5rem;
     width: 95%;             
-    max-width: 1250px; /* Permitimos que sea un poco más ancha */     
+    max-width: 1250px;    
     margin: 0 auto;         
     border-radius: var(--nav-radius);
     box-shadow: var(--nav-shadow);
-    pointer-events: auto; /* Reactiva clicks dentro de la barra */
+    pointer-events: auto; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Logo Navbar */
+/* Logo */
 .custom-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--nav-text);
-    font-weight: 700;
-    font-size: 1.4rem; 
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
 }
-.custom-logo:hover { color: var(--nav-text); }
-
-/* IMAGEN DEL LOGO (Agrandado) */
 .logo-img {
-    height: 70px;  /* Altura aumentada */
+    height: 70px;
     width: auto;   
     margin-right: 12px;
     display: block; 
 }
 
-/* Enlaces Desktop */
+/* Links */
 .custom-nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Más espacio entre los links */
+    gap: 2rem; 
     margin: 0;
     padding: 0;
     align-items: center;
@@ -101,7 +102,7 @@ header.custom-header {
 .custom-nav-links li a {
     text-decoration: none;
     color: var(--nav-text);
-    font-size: 1.1rem; /* Fuente de los links aumentada */
+    font-size: 1.1rem; 
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -113,11 +114,11 @@ header.custom-header {
     color: var(--nav-accent);
 }
 
-/* Punto indicador debajo del link */
+/* Punto indicador */
 .custom-nav-links li a::after {
     content: '';
     position: absolute;
-    width: 6px; /* Punto un poco más grande */
+    width: 6px; 
     height: 6px;
     background-color: var(--nav-accent);
     border-radius: 50%;
@@ -132,25 +133,17 @@ header.custom-header {
     transform: translateX(-50%) scale(1);
 }
 
-/* Ajuste del icono del mundo (Idioma) */
-.custom-nav-links .fa-globe {
-    transition: transform 0.3s ease;
-}
-.custom-nav-links a:hover .fa-globe {
-    transform: rotate(15deg); /* Pequeña animación al pasar el mouse */
-}
-
-/* Botón Contacto */
+/* Botón Contacto Navbar */
 .btn-nav-contacto {
     background-color: var(--nav-accent);
     color: var(--nav-bg) !important; 
     border: none;
-    padding: 10px 25px; /* Botón más grande */
+    padding: 10px 25px;
     border-radius: 50px; 
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(56, 189, 248, 0.3); 
-    font-size: 1rem; /* Texto del botón más grande */
+    font-size: 1rem;
 }
 
 .btn-nav-contacto:hover {
@@ -159,7 +152,15 @@ header.custom-header {
     transform: translateY(-1px);
 }
 
-/* Botón Hamburguesa Móvil */
+/* Icono Mundo */
+.custom-nav-links .fa-globe {
+    transition: transform 0.3s ease;
+}
+.custom-nav-links a:hover .fa-globe {
+    transform: rotate(15deg);
+}
+
+/* Menú Móvil */
 .custom-menu-btn {
     display: none;
     color: var(--nav-text);
@@ -169,7 +170,52 @@ header.custom-header {
     border: none;
 }
 
-/* Responsive */
+/* Dropdown */
+.dropdown-item { position: relative; }
+
+.dropdown-menu-hover {
+    display: none;             
+    position: absolute;        
+    top: 100%;                 
+    left: 0;
+    background-color: rgba(11, 28, 44, 0.95); 
+    min-width: 200px;          
+    list-style: none;          
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 0 0 8px 8px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
+    z-index: 1000;             
+    backdrop-filter: blur(5px); 
+}
+
+.dropdown-menu-hover li a {
+    display: block;            
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.8) !important; 
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
+}
+
+.dropdown-menu-hover li:last-child a { border-bottom: none; }
+
+.dropdown-menu-hover li a:hover {
+    background-color: #0d6efd; 
+    color: #ffffff !important;
+    padding-left: 25px;        
+}
+
+.dropdown-item:hover .dropdown-menu-hover {
+    display: block;
+    animation: fadeIn 0.3s ease; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 991px) {
     .custom-menu-btn { display: block; }
     
@@ -199,11 +245,11 @@ header.custom-header {
     }
 }
 
-/* --- SECCIONES PRINCIPALES --- */
+/* =========================================
+   4. HEADERS Y PORTADAS
+   ========================================= */
 
-/* 1. PORTADA PRINCIPAL (INDEX) */
-/* En style.css */
-
+/* Hero Principal (Index) */
 .hero-section {
     position: relative;
     background: url('../imagenes/indPetrolera.jpg') no-repeat center center/cover;
@@ -211,8 +257,6 @@ header.custom-header {
     display: flex;
     align-items: center;
     margin-top: -100px; 
-    
-    /* CAMBIO AQUÍ: Aumentamos de 180px a 260px (o más si querés) */
     padding-top: 250px; 
 }
 
@@ -221,52 +265,217 @@ header.custom-header {
     background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(0, 68, 129, 0.6));
 }
 
-/* Tamaño de Títulos */
 .hero-section h1.display-4 {
     font-size: 3rem; 
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* 2. CABECERAS INTERNAS (Páginas Secundarias) */
+/* Headers Secundarios (General) */
 .page-header {
     background: var(--brand-blue);
     color: white;
-    /* Subimos el bloque */
     margin-top: -100px; 
-    /* Padding MUY grande arriba para destapar el título */
     padding: 14rem 0 4rem 0; 
     margin-bottom: 3rem;
     text-align: center;
 }
 
-.page-header h1 {
-    font-size: 2.5rem; 
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+/* Variación: Header Nosotros */
+.page-header-about {
+    background: linear-gradient(to right, rgba(0, 68, 129, 0.9), rgba(15, 23, 42, 0.85)), 
+                url('../imagenes/equipo-fondo.jpg') center/cover no-repeat;
 }
 
-.page-header .lead {
-    font-size: 1.2rem;
-    opacity: 0.9;
+/* Variación: Header Clientes */
+.page-header-clients {
+    background: linear-gradient(to right, rgba(0, 68, 129, 0.9), rgba(15, 23, 42, 0.8)), 
+                url('../imagenes/industria-fondo.jpg') center/cover no-repeat;
 }
 
+/* Variación: Header Repuestos (Con ajuste de padding) */
+.header-spacing {
+    padding-top: 180px !important; 
+    padding-bottom: 80px;
+}
 
-/* Cards y Efectos */
+.page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+.page-header .lead { font-size: 1.2rem; opacity: 0.9; }
+
+/* Separador visual pequeño */
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--brand-light);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+}
+
+/* =========================================
+   5. TARJETAS Y SECCIONES DE CONTENIDO
+   ========================================= */
+
+/* General Cards */
 .card { border: none; transition: transform 0.3s, box-shadow 0.3s; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
 
-/* Clientes */
-.client-logo {
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: 0.3s;
-    max-height: 60px;
+/* Cards Soluciones (Index) */
+.solution-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.client-logo:hover { filter: grayscale(0%); opacity: 1; }
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: var(--brand-light);
+}
+.solution-card:hover .icon-box i {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--brand-light) !important;
+}
+.icon-box i { transition: transform 0.3s ease; }
 
-/* --- ESTILOS CARRUSEL DE CLIENTES --- */
+/* Cards Próximos Lanzamientos (Index) */
+.upcoming-card {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.upcoming-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+.upcoming-img-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+.upcoming-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    filter: grayscale(40%);
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+.upcoming-card:hover .upcoming-img {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+.upcoming-badge {
+    position: absolute;
+    top: 15px; right: 15px;
+    background-color: var(--brand-light);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 168, 232, 0.4);
+    z-index: 2;
+}
 
+/* Cards Servicios (ZigZag) */
+.service-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.service-section:last-child { border-bottom: none; }
+.service-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px !important;
+    transition: transform 0.3s ease;
+}
+.service-section h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.service-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 60px; height: 4px;
+    background-color: var(--brand-light);
+}
+
+/* Cards Repuestos (Repuestos.html) */
+.repuesto-card img { transition: transform 0.5s ease; }
+.repuesto-card:hover img { transform: scale(1.08); }
+
+/* Cards Testimonios (Clientes.html) */
+.testimonial-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    height: 100%;
+}
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-bottom-color: var(--brand-light);
+}
+.quote-icon {
+    font-size: 3rem;
+    color: rgba(0, 68, 129, 0.1);
+    position: absolute;
+    top: 20px; right: 30px;
+}
+
+/* Iconos Industria (Clientes.html) */
+.industry-icon-box {
+    width: 80px; height: 80px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--brand-blue);
+    transition: all 0.3s ease;
+}
+.industry-item:hover .industry-icon-box {
+    background: var(--brand-blue);
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+/* Cards Valores (Nosotros.html) */
+.values-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 5px solid var(--brand-light);
+    height: 100%;
+}
+.values-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.values-icon-wrapper {
+    width: 70px; height: 70px;
+    background-color: rgba(56, 189, 248, 0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--brand-blue);
+}
+
+/* =========================================
+   6. SLIDERS & CARRUSELES
+   ========================================= */
+
+/* --- 6.1 Carrusel de Clientes (Infinito Horizontal) --- */
 .slider-container {
     overflow: hidden;
     background: white;
@@ -274,7 +483,7 @@ header.custom-header {
     position: relative;
     width: 100%;
 }
-
+/* Efecto fade a los costados */
 .slider-container::before,
 .slider-container::after {
     background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
@@ -285,375 +494,160 @@ header.custom-header {
     z-index: 2;
     top: 0;
 }
-.slider-container::after {
-    right: 0;
-    transform: rotateZ(180deg);
-}
-.slider-container::before {
-    left: 0;
-}
+.slider-container::after { right: 0; transform: rotateZ(180deg); }
+.slider-container::before { left: 0; }
 
 .slide-track {
     display: flex;
-    width: calc(250px * 14); 
+    width: calc(250px * 14); /* Ajustar según cantidad de logos */
     animation: scroll 40s linear infinite; 
 }
+.slide-track:hover { animation-play-state: paused; }
 
-.slide-track:hover {
-    animation-play-state: paused; 
-}
-
-.slide {
+.slide-logo {
     height: 100px;
     width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     padding: 0 20px; 
 }
-
-.slide img {
+.slide-logo img {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
     filter: none !important; 
     transition: transform 0.3s ease;
 }
-
-.slide img:hover {
-    transform: scale(1.1); 
-}
+.slide-logo img:hover { transform: scale(1.1); }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-250px * 7)); } 
 }
 
-/* --- BOTÓN FLOTANTE DE WHATSAPP --- */
+/* Clientes Logos (Clase auxiliar) */
+.client-logo {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 0.3s;
+    max-height: 60px;
+}
+.client-logo:hover { filter: grayscale(0%); opacity: 1; }
+
+
+/* --- 6.2 Carrusel Planta Industrial (Nosotros.html) --- */
+.carousel-planta-item {
+    height: 500px;           
+    width: 100% !important;  
+    background-color: #6c757d; 
+    position: relative;
+}
+.object-fit-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    left: 0; right: 0; bottom: 0;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+/* =========================================
+   7. SECCIONES ESPECIALES
+   ========================================= */
+
+/* ISO Highlight (Nosotros.html) */
+.iso-highlight-section {
+    background: var(--brand-blue);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.btn-download-iso {
+    background-color: #fff;
+    color: var(--brand-blue);
+    font-weight: 800;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-flex; align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-download-iso:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(255,255,255,0.3);
+    color: var(--brand-light);
+}
+
+/* =========================================
+   8. FOOTER & UTILIDADES
+   ========================================= */
+.footer-logo-mega {
+    width: 90%; max-width: 380px; height: auto;
+    object-fit: contain; display: block; margin: 0 auto; 
+}
+.footer-cert-img {
+    height: 80px; width: auto;
+    transition: transform 0.3s ease;
+    margin-bottom: 5px; 
+}
+.footer-iso-container {
+    width: 250px; height: auto; padding: 0 !important;
+    background-color: transparent !important;
+    transition: transform 0.3s ease;
+}
+.footer-cert-img:hover, 
+.footer-iso-container:hover { transform: scale(1.1); }
+footer p { font-size: 0.85rem; }
+
+/* Botón WhatsApp Flotante */
 .btn-whatsapp {
-    position: fixed; 
-    bottom: 30px;    
-    right: 30px;     
-    width: 60px;
-    height: 60px;
+    position: fixed; bottom: 30px; right: 30px; 
+    width: 60px; height: 60px;
     background-color: #25d366; 
     color: white;
     border-radius: 50%; 
     text-align: center;
     font-size: 35px; 
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3); 
-    z-index: 1000;   
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 1000; display: flex; align-items: center; justify-content: center;
     text-decoration: none;
     transition: all 0.3s ease; 
 }
-
 .btn-whatsapp:hover {
     background-color: #128c7e; 
-    transform: scale(1.1);     
-    color: white;              
+    transform: scale(1.1); color: white;              
+}
+
+/* Botón Volver */
+.back-link {
+    display: inline-flex; align-items: center;        
+    color: rgba(255, 255, 255, 0.7); 
+    text-decoration: none; font-weight: 600; font-size: 1.1rem;          
+    transition: all 0.3s ease;  
+}
+.back-link i { margin-right: 8px; transition: transform 0.3s ease; }
+.back-link:hover { color: #ffffff; text-decoration: none; }
+.back-link:hover i { transform: translateX(-5px); }
+
+/* =========================================
+   9. MEDIA QUERIES (AJUSTES FINALES)
+   ========================================= */
+@media (min-width: 768px) {
+    .footer-logo-mega { margin: 0; width: 100%; }
+}
+
+@media (max-width: 991px) {
+    .section-service { text-align: center; margin-bottom: 60px !important; }
+    .section-service ul { display: inline-block; text-align: left; }
+    .service-img { height: 250px; }
+    .service-section h2::after { left: 50%; transform: translateX(-50%); }
 }
 
 @media (max-width: 768px) {
-    .btn-whatsapp {
-        width: 50px;
-        height: 50px;
-        font-size: 28px;
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
-/* Estilo para el botón de volver */
-.back-link {
-    display: inline-flex;       
-    align-items: center;        
-    color: rgba(255, 255, 255, 0.7); 
-    text-decoration: none;      
-    font-weight: 600;           
-    font-size: 1.1rem;          
-    transition: all 0.3s ease;  
-}
-
-.back-link i {
-    margin-right: 8px;          
-    transition: transform 0.3s ease; 
-}
-
-.back-link:hover {
-    color: #ffffff;             
-    text-decoration: none;      
-}
-
-.back-link:hover i {
-    transform: translateX(-5px); 
-}
-
-/* --- ESTILOS DEL DROPDOWN --- */
-
-.dropdown-item {
-    position: relative; 
-}
-
-.dropdown-menu-hover {
-    display: none;             
-    position: absolute;        
-    top: 100%;                 
-    left: 0;
-    background-color: rgba(11, 28, 44, 0.95); 
-    min-width: 200px;          
-    list-style: none;          
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 0 0 8px 8px; 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
-    z-index: 1000;             
-    backdrop-filter: blur(5px); 
-}
-
-.dropdown-menu-hover li a {
-    display: block;            
-    padding: 12px 20px;
-    color: rgba(255, 255, 255, 0.8) !important; 
-    text-decoration: none;
-    font-size: 0.95rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05); 
-    transition: all 0.3s ease;
-}
-
-.dropdown-menu-hover li:last-child a {
-    border-bottom: none;
-}
-
-.dropdown-menu-hover li a:hover {
-    background-color: #0d6efd; 
-    color: #ffffff !important;
-    padding-left: 25px;        
-}
-
-.dropdown-item:hover .dropdown-menu-hover {
-    display: block;
-    animation: fadeIn 0.3s ease; 
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- FOOTER Y LOGOS --- */
-
-.footer-logo-mega {
-    width: 90%; 
-    max-width: 380px; 
-    height: auto; 
-    object-fit: contain;
-    display: block;
-    margin: 0 auto; 
-}
-
-@media (min-width: 768px) {
-    .footer-logo-mega {
-        margin: 0; 
-        width: 100%; 
-    }
-}
-
-.footer-description {
-    font-size: 0.95rem; 
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 90%; 
-}
-
-footer p {
-    font-size: 0.85rem;
-}
-
-/* --- IMÁGENES DE CERTIFICACIÓN (DERECHA) --- */
-
-/* Logo "Hecho en Argentina" - Un poco más chico para contraste */
-.footer-cert-img {
-    height: 80px; /* Reducido de 90 a 80 */
-    width: auto;
-    transition: transform 0.3s ease;
-    margin-bottom: 5px; /* Espacio para separar */
-}
-
-/* Contenedor ISO - SIN FONDO BLANCO y MAS GRANDE */
-.footer-iso-container {
-    width: 250px;     /* Aumentado considerablemente */
-    height: auto;     /* Altura automática */
-    padding: 0 !important;
-    background-color: transparent !important; /* Fuerza la transparencia */
-    border-radius: 0;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto hover */
-.footer-cert-img:hover, 
-.footer-iso-container:hover {
-    transform: scale(1.1);
-}
-
-/* --- ESTILOS SECCIÓN SERVICIOS (ZIGZAG) --- */
-
-.section-service {
-    padding: 40px 0;
-}
-
-.service-img {
-    width: 100%;
-    height: 350px; /* Altura fija para mantener uniformidad */
-    object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
-    border-bottom: 5px solid var(--brand-light); /* Detalle estético en la base */
-    transition: all 0.4s ease;
-}
-
-.service-img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
-}
-
-/* Espaciado para los iconos en listas */
-.section-service ul li {
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-}
-
-/* Ajuste responsive para que en móviles no se vea pegado */
-@media (max-width: 991px) {
-    .section-service {
-        text-align: center;
-        margin-bottom: 60px !important;
-    }
-    .section-service ul {
-        display: inline-block;
-        text-align: left;
-    }
-    .service-img {
-        height: 250px;
-    }
-}
-
-/* --- ESTILOS ESPECÍFICOS PARA SERVICIOS ZIGZAG --- */
-
-.service-section {
-    padding: 3rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.service-section:last-child {
-    border-bottom: none;
-}
-
-.service-img {
-    max-height: 400px;
-    width: 100%;
-    object-fit: cover; /* Esto asegura que las fotos no se deformen si tienen distintos tamaños */
-    border-radius: 15px !important;
-    transition: transform 0.3s ease;
-}
-
-.service-section h2 {
-    position: relative;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-.service-section h2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 4px;
-    background-color: var(--brand-light);
-}
-
-/* En pantallas reverse, movemos la barrita decorativa a la derecha si centramos el texto */
-@media (max-width: 991px) {
-    .service-section {
-        text-align: center;
-        padding: 2rem 0;
-    }
-    .service-section h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-/* Asegura que las cards de soluciones tengan una transición suave y sombra */
-.solution-card {
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Mantiene los botones alineados abajo */
-}
-
-.solution-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
-    border-color: var(--brand-light);
-}
-
-.icon-box i {
-    transition: transform 0.3s ease;
-}
-
-.solution-card:hover .icon-box i {
-    transform: scale(1.1) rotate(5deg);
-    color: var(--brand-light) !important;
-}
-
-/* --- PROXIMOS LANZAMIENTOS --- */
-.upcoming-card {
-    transition: all 0.4s ease;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.upcoming-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
-}
-
-.upcoming-img-container {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-    background-color: #f8fafc;
-}
-
-.upcoming-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Para que la bomba se vea completa */
-    padding: 20px;
-    filter: grayscale(40%); /* Efecto visual de "preview" */
-    transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.upcoming-card:hover .upcoming-img {
-    transform: scale(1.08);
-    filter: grayscale(0%);
-}
-
-.upcoming-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: var(--brand-light);
-    color: white;
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    /* --- Aquí está el fix --- */
-    text-transform: uppercase; 
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0, 168, 232, 0.4);
-    z-index: 2;
+    .btn-whatsapp { width: 50px; height: 50px; font-size: 28px; bottom: 20px; right: 20px; }
+    .carousel-planta-item { height: 300px; }
 }
