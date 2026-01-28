@@ -470,6 +470,43 @@ header.custom-header {
     margin-bottom: 1.5rem;
     color: var(--brand-blue);
 }
+     /* Estilos específicos para detalles */
+        .spec-table th {
+            background-color: #f8f9fa;
+            width: 40%;
+            font-weight: 600;
+            color: var(--brand-blue);
+        }
+        .feature-icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-blue);
+            margin-bottom: 10px;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Ajuste para el carrusel de producto */
+        .product-carousel-img {
+            height: 450px; /* Altura fija para mantener el tamaño */
+            object-fit: contain; /* Muestra la imagen completa sin recortar */
+            width: 100%;
+            background-color: #f8f9fa; /* Color de fondo opcional */
+        }
+        
+        /* Ajuste para móviles */
+        @media (max-width: 768px) {
+            .product-carousel-img {
+                height: 300px;
+            }
+        }
 
 /* =========================================
    6. SLIDERS & CARRUSELES
